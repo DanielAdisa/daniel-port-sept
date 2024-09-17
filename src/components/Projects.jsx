@@ -8,7 +8,7 @@ const Projects = () => {
             {PROJECTS.map((project, index) => (
                 <div key={index} className="flex flex-wrap mb-8 lg:justify-center">
                     <div className="w-full lg:w-1/4">
-                        <img src={project.image} alt={project.title} className="mb-6 rounded " width={250} height={250} />
+                        <img src={project.image} alt={project.title} className="mx-auto mb-6 rounded " width={250} height={250} />
                     </div>
                     <div className="w-full max-w-full lg:w-3/4">
                         <h3 className="mb-2 text-2xl font-semibold">{project.title}</h3>
