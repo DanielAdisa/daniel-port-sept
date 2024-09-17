@@ -1,7 +1,3 @@
-import project1 from "../assets/projects/project-1.webp";
-import project2 from "../assets/projects/project-2.webp";
-import project3 from "../assets/projects/project-3.webp";
-import project4 from "../assets/projects/project-4.webp";
 import flower7 from "../assets/projects/flower7.jpg"
 
 export const HERO_CONTENT = `Hello, I'm Daniel. As a versatile digital creator, I've honed my skills in software development, 3D art, game testing, data analysis, and graphic design. With a passion for turning ideas into reality, I specialize in crafting digital masterpieces that captivate and inspire. From concept to execution, I'm dedicated to delivering exceptional results. Let's collaborate and create something extraordinary together. #DreamItIMakeIt`;
@@ -41,11 +37,11 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "Desire",
     image: flower7,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "A flame that burns so bright and wild. Desire's dance, a treacherous child. It leads us on, a siren's song, To paths where hearts may go astray and wrong.",
+    technologies: ["Blender", "PhotoShop", "DAZ-3D"],
   },
   {
     title: "Task Management App",
