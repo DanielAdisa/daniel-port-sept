@@ -1,4 +1,4 @@
-import profilePic from "../assets/1.png"
+import profilePic from "../assets/12.png"
 import {HERO_CONTENT} from "../constants"
 
 
