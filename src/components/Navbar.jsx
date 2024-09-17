@@ -11,19 +11,19 @@ const Navbar = () => {
         </div>
         <div className="flex items-center justify-center gap-4 m-8 text-2xl">
 
-          <a href="" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/daniel-oluwatobi-adisa-7b076a199/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin/>
           </a>
 
-          <a href="" target="_blank" rel="noopener noreferrer" aria-label="Github">
+          <a href="https://github.com/DanielAdisa/" target="_blank" rel="noopener noreferrer" aria-label="Github">
             <FaGithub/>
           </a>
 
-          <a href="" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <a href="https://www.instagram.com/daniel.made.it?igsh=MXY2Nmt3bWRvaHJxdQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <FaInstagram/>
           </a>
 
-          <a href="" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
+          <a href="https://wa.me/message/V4TC5GSQTN7RM1" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
             <FaWhatsapp/>
           </a>
           
