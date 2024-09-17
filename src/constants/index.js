@@ -10,11 +10,25 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "2022 - 2023",
-    role: "Full Stack Developer",
-    company: "Maranatha Specialist Hospital",
+    year: "2023 - Present",
+    role: "System Engineer Intern",
+    company: "D.S.M.O.S & Technology",
     description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
     technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+  },
+  {
+    year: "2023 - 2024",
+    role: "Course Instructor(N.Y.S.C)",
+    company: "Coriftech Limited",
+    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
+    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+  },
+  {
+    year: "2020 - Present",
+    role: "Software Engineer",
+    company: "Adisa Made It",
+    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
+    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
   },
   {
     year: "2022 - 2023",
@@ -24,19 +38,13 @@ export const EXPERIENCES = [
     technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
   },
   {
-    year: "2021 - Present",
-    role: "Full Stack Developer",
-    company: "Misfits For Christ",
+    year: "2021 - 2022",
+    role: "UI/UX Designer",
+    company: "Accra Institute of Technology",
     description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
     technologies: ["Python", "Svelte", "Three.js", "Postgres"],
   },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Adisa Made It",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  },
+  
 ];
 
 export const PROJECTS = [

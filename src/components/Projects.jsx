@@ -10,7 +10,7 @@ const Projects = () => {
                     <div className="w-full lg:w-1/4">
                         <img src={project.image} alt={project.title} className="mb-6 rounded " width={250} height={250} />
                     </div>
-                    <div className="w-full max-w-full lg:w-3/4">
+                    <div className="w-full max-w-full my-auto lg:w-3/4">
                         <h3 className="mb-2 text-2xl font-semibold">{project.title}</h3>
                         <p className="mb-4 text-left text-stone-400">{project.description}</p>
                         {project.technologies.map((tech, index) => (
