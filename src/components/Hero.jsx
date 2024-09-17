@@ -20,7 +20,7 @@ const Hero = () => {
                     <span className="text-3xl tracking-tight text-transparent bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text animate-pulse">
                         Full Stack Developer
                     </span>
-                    <p className="max-w-lg py-6 my-2 text-xl leading-relaxed tracking-tighter ">
+                    <p className="max-w-lg py-6 my-2 text-2xl leading-relaxed tracking-tighter ">
                         {HERO_CONTENT}
                     </p>
                     <a href="/resume.pdf" 
