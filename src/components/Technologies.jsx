@@ -9,11 +9,11 @@ const Technologies = () => {
   return (
     <div className="pb-24 ">
         <h2 className="my-20 text-4xl text-center ">Stacks</h2>
-        <div className="flex flex-wrap items-center justify-center gap-4 ">
-            <div>
+        <div className="flex flex-wrap items-center content-center justify-center gap-4 mx-auto">
+            <div className="ml-4">
                 <RiReactjsFill className=" text-7xl text-cyan-400" />   
             </div>
-            <div className="p-4 ">
+            <div className="p-4 ml-4">
                 <TbBrandNextjs className=" text-7xl" />   
             </div>
             <div className="p-4 ">
