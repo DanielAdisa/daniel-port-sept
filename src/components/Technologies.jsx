@@ -2,7 +2,7 @@ import { BiLogoPostgresql } from "react-icons/bi"
 import { DiRedis } from "react-icons/di"
 import { FaNodeJs } from "react-icons/fa"
 import { RiReactjsFill, RiReactjsLine } from "react-icons/ri"
-import { SiAdobephotoshop, SiBlender, SiMongodb } from "react-icons/si"
+import { SiAdobephotoshop, SiBlender, SiCinema4D, SiMongodb, SiPhp } from "react-icons/si"
 import { TbBrandNextjs } from "react-icons/tb"
 
 const Technologies = () => {
@@ -27,6 +27,12 @@ const Technologies = () => {
             </div>
             <div className="p-4 ">
                 <FaNodeJs className="text-green-500 text-7xl" />   
+            </div>
+            <div className="p-4 ">
+                <SiPhp className=" text-7xl text-sky-700" />   
+            </div>
+            <div className="p-4 ">
+                <SiCinema4D className=" text-7xl text-sky-700" />   
             </div>
             <div className="p-4 ">
                 <BiLogoPostgresql className=" text-7xl text-sky-700" />   
