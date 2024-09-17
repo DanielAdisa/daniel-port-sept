@@ -1,5 +1,5 @@
 import flower7 from "../assets/projects/flower7.jpg"
-import melody from "../assets/projects/Melody.png"
+import melody from "../assets/projects/melody.png"
 import doom from "../assets/projects/doom.png"
 import oglav from "../assets/projects/oglav.png"
 import desire from "../assets/projects/1.png"
