@@ -1,4 +1,8 @@
 import flower7 from "../assets/projects/flower7.jpg"
+import melody from "../assets/projects/Melody.png"
+import doom from "../assets/projects/doom.png"
+import oglav from "../assets/projects/oglav.png"
+import desire from "../assets/projects/1.png"
 
 export const HERO_CONTENT = `Hello, I'm Daniel. As a versatile digital creator, I've honed my skills in software development, 3D art, game testing, data analysis, and graphic design. With a passion for turning ideas into reality, I specialize in crafting digital masterpieces that captivate and inspire. From concept to execution, I'm dedicated to delivering exceptional results. Let's collaborate and create something extraordinary together. #DreamItIMakeIt`;
 
@@ -38,31 +42,38 @@ export const EXPERIENCES = [
 export const PROJECTS = [
   {
     title: "Desire",
-    image: flower7,
+    image: desire,
     description:
       "A flame that burns so bright and wild. Desire's dance, a treacherous child. It leads us on, a siren's song, To paths where hearts may go astray and wrong.",
     technologies: ["Blender", "PhotoShop", "DAZ-3D"],
   },
   {
-    title: "Task Management App",
-    image: flower7,
+    title: "Lost in the Melody",
+    image: melody,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "In the music's gentle flow, I find a world where I can go, Where worries fade and cares subside, And all the troubles of the day, Simply drift away.",
+    technologies: ["Blender", "PhotoShop", "Cinema 4D"],
   },
   {
-    title: "Portfolio Website",
+    title: "Sus Flowers",
     image: flower7,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+      "In shadowed depths, a flower gleams, A silhouette, a joyful dream. With glowing eyes and cheerful smile, It lights the darkness, mile by mile. Beside it, others, green and bright, In pots of clay, a wondrous sight. Though small and dark, their spirits soar, A beacon of hope, forevermore. In this dim world, where fears reside, Their glowing forms, a guiding tide. A symbol of joy, a constant friend, Their light will shine until the end.",
+    technologies: ["Blender", "PhotoShop", "Substance Painter"],
   },
   {
-    title: "Blogging Platform",
-    image: flower7,
+    title: "All Hail D.O.O.M",
+    image: doom,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+      "A fiery wheel, a glowing gate, in twilight's grasp, a haunting sight. Through misty woods, a solemn trail, where shadows dance and secrets wail. A group of souls, in shadows deep, toward the portal, they do creep. With hearts ablaze and spirits torn, they seek the answers they've been born. Beyond the gate, a world unknown, a realm of darkness, where shadows groan. But hope still flickers, a guiding light, as they step into the endless night.",
+    technologies: ["Blender", "PhotoShop", "DAZ-3D", "Mixamo"],
+  },
+  {
+    title: "Who is Oglav? A guardian or a threat?",
+    image: oglav,
+    description:
+      "A monstrous figure, draped in shadows deep, with antlers reaching towards the fiery sky. His eyes, like embers, watch the world asleep, a guardian of the realms beyond the eye. His skin, a molten mass, both dark and bright, a testament to power, wild and free. A necklace of skulls, a chilling sight, a symbol of his dominion, wild and seething. With claws that rend and fangs that bite, he stands as sentinel, a fearsome sight. A guardian of the unknown, the dark and night, a force of nature, both pure and spite.",
+    technologies: ["Blender", "PhotoShop", "DAZ-3D", "Mixamo"],
   },
 ];
 
