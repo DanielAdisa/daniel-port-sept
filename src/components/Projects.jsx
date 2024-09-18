@@ -15,7 +15,7 @@ const Projects = () => {
                     <motion.div
                         whileInView={{opacity: 1, x:0}}
                         initial={{opacity:0 , x:-100}}
-                        transition={{duration: 1.5}} 
+                        transition={{duration: 1}} 
                         className="w-full lg:w-1/4">
                         <img src={project.image} alt={project.title} className="mb-6 rounded " width={250} height={250} />
                     </motion.div>
@@ -33,7 +33,7 @@ const Projects = () => {
                                 <motion.span
                                     whileInView={{opacity: 1, y:0}}
                                     initial={{opacity:0 , y:15}}
-                                    transition={{duration:1 }}
+                                    transition={{duration:1.5 }}
                                     className="p-2 mr-2 text-sm font-medium rounded bg-stone-900 text-stone-300" key={index}>
                                         {tech}
                                 </motion.span>
