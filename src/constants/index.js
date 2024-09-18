@@ -83,14 +83,14 @@ export const PROJECTS = [
       "A monstrous figure, draped in shadows deep, with antlers reaching towards the fiery sky. His eyes, like embers, watch the world asleep, a guardian of the realms beyond the eye. His skin, a molten mass, both dark and bright, a testament to power, wild and free. A necklace of skulls, a chilling sight, a symbol of his dominion, wild and seething. With claws that rend and fangs that bite, he stands as sentinel, a fearsome sight. A guardian of the unknown, the dark and night, a force of nature, both pure and spite.",
     technologies: ["Blender", "PhotoShop", "DAZ-3D", "Mixamo"],
   },
-  {
-    title: "NaijaLager",
-    image: oglav,
-    description:
-      "A monstrous figure, draped in shadows deep, with antlers reaching towards the fiery sky. His eyes, like embers, watch the world asleep, a guardian of the realms beyond the eye. His skin, a molten mass, both dark and bright, a testament to power, wild and free. A necklace of skulls, a chilling sight, a symbol of his dominion, wild and seething. With claws that rend and fangs that bite, he stands as sentinel, a fearsome sight. A guardian of the unknown, the dark and night, a force of nature, both pure and spite.",
-    technologies: ["Blender", "PhotoShop", "DAZ-3D", "Mixamo"],
-    link: "/",
-  },
+  // {
+  //   title: "NaijaLager",
+  //   image: oglav,
+  //   description:
+  //     "A monstrous figure, draped in shadows deep, with antlers reaching towards the fiery sky. His eyes, like embers, watch the world asleep, a guardian of the realms beyond the eye. His skin, a molten mass, both dark and bright, a testament to power, wild and free. A necklace of skulls, a chilling sight, a symbol of his dominion, wild and seething. With claws that rend and fangs that bite, he stands as sentinel, a fearsome sight. A guardian of the unknown, the dark and night, a force of nature, both pure and spite.",
+  //   technologies: ["Blender", "PhotoShop", "DAZ-3D", "Mixamo"],
+  //   link: "/",
+  // },
 ];
 
 export const CONTACT = {
