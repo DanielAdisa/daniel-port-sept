@@ -32,8 +32,8 @@ const Projects = () => {
                             {project.technologies.map((tech, index) => (
                                 <motion.span
                                     whileInView={{opacity: 1, y:0}}
-                                    initial={{opacity:0 , y:100}}
-                                    transition={{duration:2}}
+                                    initial={{opacity:0 , y:15}}
+                                    transition={{duration:1 }}
                                     className="p-2 mr-2 text-sm font-medium rounded bg-stone-900 text-stone-300" key={index}>
                                         {tech}
                                 </motion.span>
