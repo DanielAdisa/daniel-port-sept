@@ -1,23 +1,43 @@
 import { CONTACT } from "../constants"
+import { motion } from "framer-motion"
 
 const Contact = () => {
   return (
     <div className="pb-20 border-t border-stone-900">
-        <h2 className="my-10 text-4xl text-center">
+        <motion.h2 
+             whileInView={{opacity: 1, y:0}}
+             initial={{opacity:0 , y:50}}
+             transition={{duration:0.5 }}
+            className="my-10 text-4xl text-center">
             Let's Talk
-        </h2>
+        </motion.h2>
         <div className="tracking-tighter text-center ">
-            <p className="my-4">
+            <motion.p 
+            whileInView={{opacity: 1, x:0}}
+            initial={{opacity:0 , x:-50}}
+            transition={{duration:0.5 }}
+            className="my-4">
                 {CONTACT.address}
-            </p>
+            </motion.p>
 
-            <p className="my-4">
+            <motion.p 
+             whileInView={{opacity: 1, x:0}}
+             initial={{opacity:0 , x:50}}
+             transition={{duration:0.5 }}
+            className="my-4">
+                <a href={"tel:+2349166423642"}>
                 {CONTACT.phoneNo}
-            </p>
-
-            <a href="#" className="border-b ">
+                </a>
+            </motion.p>
+            <motion.div
+            whileInView={{opacity: 1, y:0}}
+            initial={{opacity:0 , y:30}}
+            transition={{duration:0.5 }}
+            >
+            <a href={'mailto:adisadaniel4@gmail.com'} className="border-b ">
                 {CONTACT.email}
             </a>
+            </motion.div>
         </div>
     </div>
   )
