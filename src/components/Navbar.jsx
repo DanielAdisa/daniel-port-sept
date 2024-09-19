@@ -5,11 +5,15 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-between py-6 ">
-        <div>
+        <motion.div
+        whileInView={{opacity: 1, x:0}}
+        initial={{opacity:0 , x:-30}}
+        transition={{duration:1.5 }}
+        >
           <a href="/" aria-label="Home">
           <img src={Asset} alt={"Logo"} width={50} height={50} className="mx-2 "/>
           </a>
-        </div>
+        </motion.div>
         <div className="flex items-center justify-center gap-4 m-8 text-2xl">
 
           <motion.a 
