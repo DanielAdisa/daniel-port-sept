@@ -26,6 +26,8 @@ const Projects = () => {
                         className="w-full max-w-full my-auto lg:w-3/4">
                             <h3 className="mb-2 text-2xl font-semibold">{project.title}</h3>
                             <p className="mb-4 text-left text-stone-400">{project.description}</p>
+                            {/* if({project.link}) {<a href={project.link}> Link to </a>} */}
+                            
                             
                     </motion.div>
                     <div className="flex flex-row clear-both w-full ">
@@ -38,6 +40,7 @@ const Projects = () => {
                                         {tech}
                                 </motion.span>
                             ))}
+                            {/* <a href={project.link}> Link to </a> */}
                             </div>
                 </div>
             ))}

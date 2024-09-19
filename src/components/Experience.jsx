@@ -15,7 +15,7 @@ const Experience = () => {
                     <div className="w-full max-w-xl lg:w-3/4">
                         <h3 className="mb-2 font-semibold">
                             {experience.role} @{" "}
-                            <span className="px-2 py-1 mt-4 mr-2 text-sm font-medium rounded bg-stone-300 text-stone-900">{experience.company}
+                            <span className="px-2 py-1 mt-4 mr-2 text-sm font-bold rounded bg-stone-300 text-stone-900">{experience.company}
                             </span>
                         </h3>
                         <p className="mb-4 text-stone-400">
