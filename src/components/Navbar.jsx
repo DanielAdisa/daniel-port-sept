@@ -26,24 +26,24 @@ const Navbar = () => {
 
           <motion.a 
           whileInView={{opacity: 1, y:0}}
-          initial={{opacity:0 , y:50}}
-          transition={{duration:1 }}
+          initial={{opacity:0 , y:70}}
+          transition={{duration:0.5 }}
           href="https://github.com/DanielAdisa/" target="_blank" rel="noopener noreferrer" aria-label="Github">
             <FaGithub/>
           </motion.a>
 
           <motion.a 
           whileInView={{opacity: 1, y:0}}
-          initial={{opacity:0 , y:50}}
-          transition={{duration:1.5 }}
+          initial={{opacity:0 , y:90}}
+          transition={{duration:0.5 }}
           href="https://www.instagram.com/daniel.made.it?igsh=MXY2Nmt3bWRvaHJxdQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <FaInstagram/>
           </motion.a>
 
           <motion.a 
           whileInView={{opacity: 1, y:0}}
-          initial={{opacity:0 , y:50}}
-          transition={{duration:2 }}
+          initial={{opacity:0 , y:110}}
+          transition={{duration:0.5 }}
           href="https://wa.me/message/V4TC5GSQTN7RM1" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
             <FaWhatsapp/>
           </motion.a>
