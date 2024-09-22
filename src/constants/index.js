@@ -2,6 +2,10 @@ import flower7 from "../assets/projects/flower7.jpg"
 import melody from "../assets/projects/melody.png"
 import doom from "../assets/projects/doom.png"
 import oglav from "../assets/projects/oglav.png"
+import todo from "../assets/projects/todoapp1.jpg"
+import firstport from "../assets/projects/firstport.jpg"
+import foods from "../assets/projects/FOODS.jpg"
+import lager from "../assets/projects/LAGER.jpg"
 import desire from "../assets/projects/1.png"
 
 export const HERO_CONTENT = `Hello, I'm Daniel. As a versatile digital creator, I've honed my skills in software development, 3D art, game testing, data analysis, and graphic design. With a passion for turning ideas into reality, I specialize in crafting digital masterpieces that captivate and inspire. From concept to execution, I'm dedicated to delivering exceptional results. Let's collaborate and create something extraordinary together. #DreamItIMakeIt`;
@@ -96,7 +100,7 @@ export const PROJECTS = [
 export const PROJECTSDEV = [
   {
     title: "First Portfolio",
-    image: desire,
+    image: firstport,
     description:
       "My first portfolio website built using React Js and Sanity for the backend",
     technologies: ["React", "Sanity", "Tailwind"],
@@ -104,7 +108,7 @@ export const PROJECTSDEV = [
   },
   {
     title: "To-Do List",
-    image: melody,
+    image: todo,
     description:
       "A To-Do app showing the use of certain animations and react UseState(). Stores tasks locally on your browser.",
     technologies: ["React", "Tailwind", "Express JS"],
@@ -112,11 +116,19 @@ export const PROJECTSDEV = [
   },
   {
     title: "Foods R Us",
-    image: flower7,
+    image: foods,
     description:
       "A website for a resturant showcasing the use of react and tailwind css to build beautiful and pleasing websites.",
     technologies: ["Blender", "PhotoShop", "Substance Painter"],
     link: "https://foodsrus.vercel.app/",
+  },
+  {
+    title: "Naija Lager",
+    image: lager,
+    description:
+      "A website used for bulk order of drinks for Nigerians in diaspora. Built using wordpress and WooCommerce",
+    technologies: ["Wordpress", "WooCommerce",],
+    link: "https://naijalager.com/",
   },
 ];
 

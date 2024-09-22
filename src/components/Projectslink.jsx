@@ -51,7 +51,7 @@ const Projectslink = () => {
                                     whileInView={{opacity: 1, y:0}}
                                     initial={{opacity:0 , y:15}}
                                     transition={{duration:1.5 }}
-                                    className="justify-center p-3 mt-4 mr-2 text-sm font-medium bg-green-700 rounded text-stone-300">
+                                    className="justify-center p-3 mt-4 mr-2 font-mono text-sm font-medium rounded bg-stone-300 text-stone-800">
                                     Link To Build
                                 </span>
                                 </a>
