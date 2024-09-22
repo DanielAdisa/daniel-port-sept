@@ -1,18 +1,16 @@
-import { PROJECTS } from "../constants"
+import { PROJECTSDEV } from "../constants"
 import { motion } from "framer-motion"
 
-const Projects = () => {
-
-    
+const Projectslink = () => {
   return (
     <div className="pb-4 ">
         <motion.h2 
             whileInView={{opacity: 1, y:0}}
             initial={{opacity:0 , y:-100}}
             transition={{duration: 0.5}}
-            className="my-20 text-4xl text-center ">Graphics Projects</motion.h2>
+            className="my-20 text-4xl text-center ">Dev Projects</motion.h2>
         <div>
-            {PROJECTS.map((project, index) => (
+            {PROJECTSDEV.map((project, index) => (
                 <div key={index} className="flex flex-wrap mb-8 lg:justify-center">
                     <motion.div
                         whileInView={{opacity: 1, x:0}}
@@ -35,7 +33,6 @@ const Projects = () => {
                             <a href={project.link}> Link to </a> */}
                             
                             
-                    </motion.div>
                     <div className="flex flex-row clear-both w-full ">
                             {project.technologies.map((tech, index) => (
                                 <motion.span
@@ -48,10 +45,22 @@ const Projects = () => {
                             ))}
                             {/* <a href={project.link}> Link to </a> */}
                             </div>
+                            <div className="mt-5 ">
+                                <a href={project.link} className="w-full ">
+                                <span
+                                    whileInView={{opacity: 1, y:0}}
+                                    initial={{opacity:0 , y:15}}
+                                    transition={{duration:1.5 }}
+                                    className="justify-center p-3 mt-4 mr-2 text-sm font-medium bg-green-700 rounded text-stone-300">
+                                    Link To Build
+                                </span>
+                                </a>
+                            </div>
+                    </motion.div>
                 </div>
             ))}
         </div>
     </div>
   )
 }
-export default Projects
+export default Projectslink

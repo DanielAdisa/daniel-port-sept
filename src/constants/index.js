@@ -93,6 +93,33 @@ export const PROJECTS = [
   // },
 ];
 
+export const PROJECTSDEV = [
+  {
+    title: "First Portfolio",
+    image: desire,
+    description:
+      "My first portfolio website built using React Js and Sanity for the backend",
+    technologies: ["React", "Sanity", "Tailwind"],
+    link: "https://daniels-porfolio.vercel.app/",
+  },
+  {
+    title: "To-Do List",
+    image: melody,
+    description:
+      "A To-Do app showing the use of certain animations and react UseState(). Stores tasks locally on your browser.",
+    technologies: ["React", "Tailwind", "Express JS"],
+    link: "https://to-do-app-six-zeta.vercel.app/",
+  },
+  {
+    title: "Foods R Us",
+    image: flower7,
+    description:
+      "A website for a resturant showcasing the use of react and tailwind css to build beautiful and pleasing websites.",
+    technologies: ["Blender", "PhotoShop", "Substance Painter"],
+    link: "https://foodsrus.vercel.app/",
+  },
+];
+
 export const CONTACT = {
   address: "Abuja, Nigeria",
   phoneNo: "+2349166423642",
