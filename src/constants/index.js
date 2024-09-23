@@ -8,7 +8,7 @@ import foods from "../assets/projects/FOODS.jpg"
 import lager from "../assets/projects/LAGER.jpg"
 import desire from "../assets/projects/1.png"
 
-export const HERO_CONTENT = `Hello, I'm Daniel. As a versatile digital creator, I've honed my skills in software development, 3D art, game testing, data analysis, and graphic design. With a passion for turning ideas into reality, I specialize in crafting digital masterpieces that captivate and inspire. From concept to execution, I'm dedicated to delivering exceptional results. Let's collaborate and create something extraordinary together. #DreamItIMakeIt`;
+export const HERO_CONTENT = `Hello, I'm Daniel. As a versatile digital creator, I've honed my skills in Software development, 3D art and graphic design. With a passion for turning ideas into reality, I specialize in crafting digital masterpieces that captivate and inspire. From concept to execution, I'm dedicated to delivering exceptional results. Let's collaborate and create something extraordinary together. #DreamItIMakeIt`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 
@@ -87,14 +87,6 @@ export const PROJECTS = [
       "A monstrous figure, draped in shadows deep, with antlers reaching towards the fiery sky. His eyes, like embers, watch the world asleep, a guardian of the realms beyond the eye. His skin, a molten mass, both dark and bright, a testament to power, wild and free. A necklace of skulls, a chilling sight, a symbol of his dominion, wild and seething. With claws that rend and fangs that bite, he stands as sentinel, a fearsome sight. A guardian of the unknown, the dark and night, a force of nature, both pure and spite.",
     technologies: ["Blender", "PhotoShop", "DAZ-3D", "Mixamo"],
   },
-  // {
-  //   title: "NaijaLager",
-  //   image: oglav,
-  //   description:
-  //     "A monstrous figure, draped in shadows deep, with antlers reaching towards the fiery sky. His eyes, like embers, watch the world asleep, a guardian of the realms beyond the eye. His skin, a molten mass, both dark and bright, a testament to power, wild and free. A necklace of skulls, a chilling sight, a symbol of his dominion, wild and seething. With claws that rend and fangs that bite, he stands as sentinel, a fearsome sight. A guardian of the unknown, the dark and night, a force of nature, both pure and spite.",
-  //   technologies: ["Blender", "PhotoShop", "DAZ-3D", "Mixamo"],
-  //   link: "/",
-  // },
 ];
 
 export const PROJECTSDEV = [
@@ -119,7 +111,7 @@ export const PROJECTSDEV = [
     image: foods,
     description:
       "A website for a resturant showcasing the use of react and tailwind css to build beautiful and pleasing websites.",
-    technologies: ["Blender", "PhotoShop", "Substance Painter"],
+    technologies: ["React", "Tailwind", "NodeJS", "Framer Motion"],
     link: "https://foodsrus.vercel.app/",
   },
   {
