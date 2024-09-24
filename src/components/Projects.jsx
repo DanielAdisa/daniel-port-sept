@@ -11,7 +11,7 @@ const Projects = () => {
             initial={{opacity:0 , y:-100}}
             transition={{duration: 0.5}}
             className="my-20 text-4xl text-center ">Graphics Projects</motion.h2>
-        <div>
+        <div className=""> 
             {PROJECTS.map((project, index) => (
                 <div key={index} className="flex flex-wrap mb-8 lg:justify-center">
                     <motion.div

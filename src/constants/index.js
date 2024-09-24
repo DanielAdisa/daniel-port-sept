@@ -56,15 +56,15 @@ export const PROJECTS = [
     title: "Desire",
     image: desire,
     description:
-      "A flame that burns so bright and wild. Desire's dance, a treacherous child. It leads us on, a siren's song, To paths where hearts may go astray and wrong.",
+    "A flame that burns so bright and wild. Desire's dance, a treacherous child. It leads us on, a siren's song, To paths where hearts may go astray and wrong.",
     technologies: ["Blender", "PhotoShop", "DAZ-3D"],
   },
   {
-    title: "Lost in the Melody",
-    image: melody,
+    title: "Who is Oglav? A guardian or a threat?",
+    image: oglav,
     description:
-      "In the music's gentle flow, I find a world where I can go, Where worries fade and cares subside, And all the troubles of the day, Simply drift away.",
-    technologies: ["Blender", "PhotoShop", "Cinema 4D"],
+      "A monstrous figure, draped in shadows deep, with antlers reaching towards the fiery sky. His eyes, like embers, watch the world asleep, a guardian of the realms beyond the eye. His skin, a molten mass, both dark and bright, a testament to power, wild and free. A necklace of skulls, a chilling sight, a symbol of his dominion, wild and seething. With claws that rend and fangs that bite, he stands as sentinel, a fearsome sight. A guardian of the unknown, the dark and night, a force of nature, both pure and spite.",
+    technologies: ["Blender", "PhotoShop", "DAZ-3D", "Mixamo"],
   },
   {
     title: "Sus Flowers",
@@ -81,11 +81,11 @@ export const PROJECTS = [
     technologies: ["Blender", "PhotoShop", "DAZ-3D", "Mixamo"],
   },
   {
-    title: "Who is Oglav? A guardian or a threat?",
-    image: oglav,
+    title: "Lost in the Melody",
+    image: melody,
     description:
-      "A monstrous figure, draped in shadows deep, with antlers reaching towards the fiery sky. His eyes, like embers, watch the world asleep, a guardian of the realms beyond the eye. His skin, a molten mass, both dark and bright, a testament to power, wild and free. A necklace of skulls, a chilling sight, a symbol of his dominion, wild and seething. With claws that rend and fangs that bite, he stands as sentinel, a fearsome sight. A guardian of the unknown, the dark and night, a force of nature, both pure and spite.",
-    technologies: ["Blender", "PhotoShop", "DAZ-3D", "Mixamo"],
+      "In the music's gentle flow, I find a world where I can go, Where worries fade and cares subside, And all the troubles of the day, Simply drift away.",
+    technologies: ["Blender", "PhotoShop", "Cinema 4D"],
   },
 ];
 
@@ -119,7 +119,7 @@ export const PROJECTSDEV = [
     image: lager,
     description:
       "A website used for bulk order of drinks for Nigerians in diaspora. Built using wordpress and WooCommerce",
-    technologies: ["Wordpress", "WooCommerce",],
+    technologies: ["Wordpress", "WooCommerce"],
     link: "https://naijalager.com/",
   },
 ];
@@ -128,4 +128,5 @@ export const CONTACT = {
   address: "Abuja, Nigeria",
   phoneNo: "+2349166423642",
   email: "adisadaniel4@gmail.com",
+  location: "https://www.google.com/maps/dir//Aso+Rock,+City+Centre+900103,+Federal+Capital+Territory/@9.0761989,7.5144294,14z/data=!4m18!1m8!3m7!1s0x104e0991e66fddfb:0x9d4da92741f9018!2sAso+Rock!8m2!3d9.083333!4d7.536111!15sCghhc28gcm9ja1oKIghhc28gcm9ja5IBBHBlYWvgAQA!16zL20vMDdnMGpf!4m8!1m0!1m5!1m1!1s0x104e0991e66fddfb:0x9d4da92741f9018!2m2!1d7.536111!2d9.083333!3e4?entry=ttu&g_ep=EgoyMDI0MDkyMi4wIKXMDSoASAFQAw%3D%3D",
 };
