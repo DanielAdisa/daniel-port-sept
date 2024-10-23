@@ -24,8 +24,8 @@ const Projectslink = () => {
                         initial={{opacity:0 , x:100}}
                         transition={{duration: 1.5}}
                         className="w-full max-w-full mx-auto lg:w-3/4">
-                            <h3 className="mb-2 text-2xl font-semibold">{project.title}</h3>
-                            <p className="mb-4 text-left text-stone-400">{project.description}</p>
+                            <h3 className="mb-2 ml-4 text-2xl font-semibold">{project.title}</h3>
+                            <p className="mb-4 ml-4 text-left text-stone-400">{project.description}</p>
                             {/* if({project.link}) {<a href={project.link}> Link to </a>} */}
                             {/* if({project.link} === ""){
                                 <div className="">" "</div>
@@ -39,7 +39,7 @@ const Projectslink = () => {
                                     whileInView={{opacity: 1, y:0}}
                                     initial={{opacity:0 , y:15}}
                                     transition={{duration:1.5 }}
-                                    className="p-2 mr-2 text-sm font-medium rounded bg-stone-900 text-stone-300" key={index}>
+                                    className="p-2 ml-4 mr-2 text-sm font-medium rounded bg-stone-900 text-stone-300" key={index}>
                                         {tech}
                                 </motion.span>
                             ))}
@@ -51,7 +51,7 @@ const Projectslink = () => {
                                     whileInView={{opacity: 1, y:0}}
                                     initial={{opacity:0 , y:15}}
                                     transition={{duration:1.5 }}
-                                    className="justify-center p-3 mt-4 mr-2 font-mono text-sm font-medium rounded bg-stone-300 text-stone-800">
+                                    className="justify-center p-3 mt-4 ml-4 mr-2 font-mono text-sm font-medium rounded bg-stone-300 text-stone-800">
                                     Link To Build
                                 </span>
                                 </a>
