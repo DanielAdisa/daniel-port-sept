@@ -8,6 +8,7 @@ import foods from "../assets/projects/FOODS.jpg"
 import lager from "../assets/projects/LAGER.jpg"
 import desire from "../assets/projects/1.png"
 import litepay from "../assets/projects/litepay.png"
+import zearchi from "../assets/projects/zearchitects.png"
 
 export const HERO_CONTENT = `Hello, I'm Daniel. As a versatile digital creator, I've honed my skills in Software development, 3D art and graphic design. With a passion for turning ideas into reality, I specialize in crafting digital masterpieces that captivate and inspire. From concept to execution, I'm dedicated to delivering exceptional results. Let's collaborate and create something extraordinary together. #DreamItIMakeIt`;
 
@@ -91,6 +92,14 @@ export const PROJECTS = [
 ];
 
 export const PROJECTSDEV = [
+  {
+    title: "ZE Architects",
+    image: zearchi,
+    description:
+      "ZE Architecture is an architectural firm based in Dublin",
+    technologies: ["Next JS", "GITBASH", "Tailwind"],
+    link: "https://ze-architectsdotcom.vercel.app/",
+  },
   {
     title: "LitePay App",
     image: litepay,
