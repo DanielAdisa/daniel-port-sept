@@ -11,6 +11,7 @@ import litepay from "../assets/projects/litepay.png"
 import zearchi from "../assets/projects/zearchitects.png"
 import dairy from "../assets/projects/Diaryapp.png"
 import kardifyme from "../assets/projects/kardifyme.jpg"
+import misfits from "../assets/projects/misfits.jpg"
 
 
 export const HERO_CONTENT = `Hello, I'm Daniel. As a versatile digital creator, I've honed my skills in Software development, 3D art and graphic design. With a passion for turning ideas into reality, I specialize in crafting digital masterpieces that captivate and inspire. From concept to execution, I'm dedicated to delivering exceptional results. Let's collaborate and create something extraordinary together. #DreamItIMakeIt`;
@@ -96,10 +97,18 @@ export const PROJECTS = [
 
 export const PROJECTSDEV = [
   {
+    title: "Misfit For Christ",
+    image: misfits,
+    description:
+      "We are on a mission to facilitate spiritual transformation through digital ministry.",
+    technologies: ["Next JS", "GITBASH", "Tailwind"],
+    link: "https://www.misfits4christ.com/",
+  },
+  {
     title: "KardifyMe",
     image: kardifyme,
     description:
-      "Change your digital outlook",
+      "Revolutionize Your Digital Identity. Next-generation digital cards powered by AI-driven design and blockchain-verified authenticity. ",
     technologies: ["Next JS", "GITBASH", "Tailwind"],
     link: "https://kardifyme.vercel.app/",
   },
