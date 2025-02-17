@@ -1,6 +1,7 @@
 import profilePic from "../assets/12.png"
 import {HERO_CONTENT} from "../constants"
 import { motion } from "framer-motion"
+import desire from "../assets/projects/1.png"
 
 const containerVariants = {
     hidden: { opacity: 0, x: -100 },
@@ -26,7 +27,7 @@ const Hero = () => {
             <div className="w-full lg:w-1/2 ">
                 <div className="flex justify-center lg:p-8 ">
                     <motion.img 
-                    src={profilePic} 
+                    src={desire} 
                     alt="Daniel Adisa"
                     className="border border-stone-900 rounded-3xl"
                     width={650}
