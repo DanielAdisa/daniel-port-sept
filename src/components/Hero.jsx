@@ -1,12 +1,7 @@
 
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useState, useEffect } from "react";
-import profilePic from "../assets/12.png";
 import { HERO_CONTENT } from "../constants";
-
-import profilePic from "../assets/12.png"
-import {HERO_CONTENT} from "../constants"
-import desire from "../assets/projects/1.png"
+import desire from "../assets/projects/1.png";
 
 
 // Typed animation variants
@@ -105,7 +100,7 @@ const Hero = () => {
               <div className="absolute inset-0 transition-all duration-300 rounded-3xl bg-gradient-to-tr from-stone-500/20 to-stone-300/10 blur-2xl group-hover:opacity-75" />
               
               <motion.img 
-                src={profilePic} 
+                src={desire} 
                 alt="Daniel Adisa - Full Stack Developer"
                 className="relative border border-stone-800 rounded-3xl backdrop-blur-sm transform-gpu"
                 width={650}
