@@ -68,13 +68,13 @@ const Hero = () => {
 
   return (
 
-    <div className="relative pb-24 overflow-hidden lg:mb-36">
+    <div className="relative overflow-hidden pb- lg:mb-" id="hero">
       <div className="absolute inset-0 pointer-events-none bg-gradient-radial from-stone-900/30 to-transparent" />
       
       <div className="relative z-10 flex flex-wrap lg:flex-row-reverse">
         {/* Image Section */}
 
-    <div className="pb-4 lg:mb-36">
+    <div className="pb-4 lg:mb-6">
         <div className="flex flex-wrap lg:flex-row-reverse">
             
 

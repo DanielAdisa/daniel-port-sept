@@ -70,7 +70,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gradient-to-b from-stone-950 to-stone-900/90">
+    <section id="contact" className="py-16 md:py-24 bg-gradient-to-b rounded-xl from-stone-950 to-stone-900/90">
       <div className="container max-w-6xl px-6 mx-auto">
         {/* Section header with modern styling */}
         <div ref={headerRef} className="mb-16">

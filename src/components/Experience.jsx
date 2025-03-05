@@ -16,7 +16,7 @@ const techIcons = {
 
 const Experience = () => {
   return (
-    <section className="py-12 bg-gradient-to-b from-stone-950 to-stone-900/50">
+    <section className="py-12 mb-10 bg-gradient-to-b rounded-xl from-stone-950 to-stone-900/50" id="experience">
       <div className="container px-4 mx-auto">
         <motion.h2 
           initial={{ opacity: 0, y: -50 }}
