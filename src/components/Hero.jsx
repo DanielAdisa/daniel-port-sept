@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useState, useEffect } from "react";
 import profilePic from "../assets/12.png";
 import { HERO_CONTENT } from "../constants";
+=======
+import profilePic from "../assets/12.png"
+import {HERO_CONTENT} from "../constants"
+import { motion } from "framer-motion"
+import desire from "../assets/projects/1.png"
+>>>>>>> e7d10956b349f4ef1a22c246733aaa674249c58f
 
 // Typed animation variants
 const containerVariants = {
@@ -66,11 +73,30 @@ const Hero = () => {
   const y = useTransform(scrollY, [0, 500], [0, 50], { clamp: false });
 
   return (
+<<<<<<< HEAD
     <section className="relative pb-24 overflow-hidden lg:mb-36">
       <div className="absolute inset-0 pointer-events-none bg-gradient-radial from-stone-900/30 to-transparent" />
       
       <div className="relative z-10 flex flex-wrap lg:flex-row-reverse">
         {/* Image Section */}
+=======
+    <div className="pb-4 lg:mb-36">
+        <div className="flex flex-wrap lg:flex-row-reverse">
+            <div className="w-full lg:w-1/2 ">
+                <div className="flex justify-center lg:p-8 ">
+                    <motion.img 
+                    src={desire} 
+                    alt="Daniel Adisa"
+                    className="border border-stone-900 rounded-3xl"
+                    width={650}
+                    height={650}
+                    initial={{x:100, opacity:0}}
+                    animate={{x:0, opacity:1}}
+                    transition={{ duration: 1, delay:1.5 }}
+                    />
+                </div>
+            </div>
+>>>>>>> e7d10956b349f4ef1a22c246733aaa674249c58f
         <div className="w-full lg:w-1/2">
           <div className="flex justify-center lg:p-8">
             <motion.div
