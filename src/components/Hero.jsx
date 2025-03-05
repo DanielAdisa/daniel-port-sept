@@ -78,7 +78,7 @@ const Hero = () => {
         <div className="flex flex-wrap lg:flex-row-reverse">
             <div className="w-full lg:w-1/2 ">
                 <div className="flex justify-center lg:p-8 ">
-                    <motion.img 
+                    {/* <motion.img 
                     src={desire} 
                     alt="Daniel Adisa"
                     className="border border-stone-900 rounded-3xl"
@@ -87,7 +87,7 @@ const Hero = () => {
                     initial={{x:100, opacity:0}}
                     animate={{x:0, opacity:1}}
                     transition={{ duration: 1, delay:1.5 }}
-                    />
+                    /> */}
                 </div>
             </div>
 
