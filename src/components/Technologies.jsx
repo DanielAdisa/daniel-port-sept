@@ -185,7 +185,7 @@ const Technologies = () => {
       {/* Tech grid with animation */}
       <div className="container mx-auto">
         <motion.div 
-          className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5"
+          className="grid grid-cols-3 gap-4 md:grid-cols-3 lg:grid-cols-5"
           layout
           transition={{ type: "spring", damping: 20, stiffness: 300 }}
         >
