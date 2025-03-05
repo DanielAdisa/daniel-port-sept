@@ -6,7 +6,6 @@ import { HERO_CONTENT } from "../constants";
 
 import profilePic from "../assets/12.png"
 import {HERO_CONTENT} from "../constants"
-import { motion } from "framer-motion"
 import desire from "../assets/projects/1.png"
 
 
