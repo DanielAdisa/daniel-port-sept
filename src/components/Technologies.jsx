@@ -321,7 +321,7 @@ const TechCard = ({ tech, index }) => {
           {/* Enhanced skill progress indicator */}
           {isHovered && (
             <motion.div 
-              className="relative w-32 h-1.5 mt-3 rounded-full bg-white/10 overflow-hidden backdrop-blur-sm border border-white/5"
+              className="relative flex items-center justify-center w-32 h-[15px] mt-3 overflow-hidden border rounded-full bg-white/10 backdrop-blur-sm border-white/5"
               initial={{ opacity: 0, width: 0 }}
               animate={{ opacity: 1, width: "100%" }}
               transition={{ duration: 0.3 }}
@@ -336,7 +336,7 @@ const TechCard = ({ tech, index }) => {
               >
                 {/* Animated gradient overlay */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                  className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-transparent via-white/30 to-transparent"
                   animate={{
                     x: ['-100%', '200%']
                   }}
@@ -352,7 +352,7 @@ const TechCard = ({ tech, index }) => {
               
               {/* Skill level indicator */}
               <motion.span
-                className="absolute text-xs font-medium -right-1 -top-1 text-white/80"
+                className="absolute text-[10px] flex items-center justify-center font-medium text-white/80"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
