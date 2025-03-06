@@ -1,24 +1,53 @@
-import { BiLogoPostgresql } from "react-icons/bi"
-import { DiRedis } from "react-icons/di"
-import { FaNodeJs } from "react-icons/fa"
-import { RiReactjsFill } from "react-icons/ri"
-import { SiAdobephotoshop, SiBlender, SiCinema4D, SiMongodb, SiPhp } from "react-icons/si"
-import { TbBrandNextjs } from "react-icons/tb"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef, useState } from "react"
+import { BiLogoPostgresql, BiLogoTailwindCss } from "react-icons/bi";
+import { DiRedis } from "react-icons/di";
+import { FaNodeJs } from "react-icons/fa";
+import { RiReactjsFill } from "react-icons/ri";
+import { TbBrandNextjs } from "react-icons/tb";
+import { 
+  SiMongodb, 
+  SiPhp, 
+  SiAdobephotoshop, 
+  SiBlender, 
+  SiCinema4D, 
+  SiVuedotjs,
+  SiSvelte,
+  SiAngular,
+  SiJavascript,
+  SiFigma,
+  SiAdobexd,
+  SiAdobeaftereffects,
+  SiSketch,
+  SiPrisma, 
+} from "react-icons/si";
+
 
 // Tech stack data with skill levels and categories
 const TECH_STACK = [
-  { Icon: RiReactjsFill, name: "React", color: "text-cyan-400", level: 95, category: "frontend", },
+  { Icon: RiReactjsFill, name: "React", color: "text-cyan-400", level: 95, category: "frontend" },
   { Icon: TbBrandNextjs, name: "Next.js", color: "text-white", level: 90, category: "frontend" },
+  { Icon: BiLogoTailwindCss, name: "Tailwind CSS", color: "text-sky-400", level: 98, category: "frontend" },
+  { Icon: SiVuedotjs, name: "Vue.js", color: "text-green-400", level: 87, category: "frontend" },
+  { Icon: SiSvelte, name: "Svelte", color: "text-orange-400", level: 85, category: "frontend" },
+  { Icon: SiAngular, name: "Angular", color: "text-red-600", level: 80, category: "frontend" },
+  { Icon: SiJavascript, name: "JavaScript", color: "text-yellow-500", level: 93, category: "frontend" },
+  
+  // Backend
   { Icon: SiMongodb, name: "MongoDB", color: "text-emerald-500", level: 85, category: "backend" },
+  { Icon: SiPrisma, name: "Prisma", color: "text-white", level: 85, category: "backend" },
   { Icon: FaNodeJs, name: "Node.js", color: "text-green-500", level: 88, category: "backend" },
   { Icon: SiPhp, name: "PHP", color: "text-purple-600", level: 80, category: "backend" },
   { Icon: BiLogoPostgresql, name: "PostgreSQL", color: "text-blue-500", level: 82, category: "backend" },
   { Icon: DiRedis, name: "Redis", color: "text-red-500", level: 75, category: "backend" },
+
   { Icon: SiAdobephotoshop, name: "Photoshop", color: "text-[#00ffff]", level: 85, category: "design" },
   { Icon: SiBlender, name: "Blender", color: "text-[#e87d0d]", level: 75, category: "design" },
   { Icon: SiCinema4D, name: "Cinema 4D", color: "text-sky-600", level: 70, category: "design" },
+  { Icon: SiFigma, name: "Figma", color: "text-pink-500", level: 90, category: "design" },
+  { Icon: SiAdobexd, name: "Adobe XD", color: "text-blue-500", level: 88, category: "design" },
+  { Icon: SiAdobeaftereffects , name: "After Effects", color: "text-purple-500", level: 80, category: "design" },
+  { Icon: SiSketch, name: "Sketch", color: "text-yellow-500", level: 75, category: "design" },
 ];
 
 // Tech card component with hover effects
@@ -102,7 +131,7 @@ const TechCard = ({ tech, index }) => {
         {/* Skill progress bar */}
         {isHovered && (
           <motion.div 
-            className="relative w-24 h-1 mt-2 overflow-hidden rounded-full bg-white/10"
+            className="relative w-24 h-1 mt-2 overflow-hidden bg-white rounded-full"
             initial={{ opacity: 0, width: 0 }}
             animate={{ opacity: 1, width: "100%" }}
             transition={{ duration: 0.3 }}
