@@ -10,3 +10,28 @@
 }
 
 
+@keyframes floating {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.drop-glow {
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+.shadow-inner-3d {
+  box-shadow: inset 0 4px 15px rgba(255,255,255,0.1),
+              inset 0 -4px 15px rgba(0,0,0,0.4);
+}
+
+@supports (backdrop-filter: blur(1px)) {
+  .quantum-glass {
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    backdrop-filter: blur(12px) saturate(180%);
+  }
+}
+
+@keyframes quantum-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.98); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
