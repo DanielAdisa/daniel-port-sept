@@ -35,38 +35,16 @@ const Contact = () => {
     });
   };
 
-  // Form submission
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setFormStatus({ ...formStatus, submitting: true });
 
-    // Actual email submission logic
-    const response = await fetch('https://api.emailservice.com/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        to: 'adisadaniel4@gmail.com',
-        subject: `New message from ${formData.name}`,
-        text: `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`,
-      }),
-    });
+    // Simulate form submission
+    setTimeout(() => {
+      setFormStatus({ submitted: true, submitting: false, error: null });
+    }, 2000);
 
-    if (response.ok) {
-      setFormStatus({
-        submitted: true,
-        submitting: false,
-        error: null
-      });
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      setFormStatus({
-        submitted: false,
-        submitting: false,
-        error: 'Failed to send message. Please try again later.'
-      });
-    }
+    window.location.href = `mailto:adisadaniel4@gmail.com?subject=Contact Form Submission&body=Hi, My name is ${formData.name}. ${formData.message} (${formData.email})`;
   };
 
   return (
