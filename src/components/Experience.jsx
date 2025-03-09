@@ -16,83 +16,73 @@ const techIcons = {
 
 const Experience = () => {
   return (
-    <section className="py-12 mb-10 bg-gradient-to-b rounded-xl from-stone-950 to-stone-900/50" id="experience">
+    <section className="py-16 mb-10 bg-gradient-to-b rounded-xl from-stone-950 to-stone-900/90 " id="experience">
       <div className="container px-4 mx-auto">
         <motion.h2 
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
-          className="mb-10 text-5xl font-bold text-center text-transparent md:text-6xl bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text"
+          className="mb-16 text-5xl font-bold text-center text-transparent md:text-6xl bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text"
         >
           Professional Journey
-          <div className="w-24 h-1 mx-auto mt-4 rounded-full bg-gradient-to-r from-purple-500 to-blue-600" />
+          <div className="w-24 h-1 mx-auto mt-4 rounded-full bg-gradient-to-r from-gray-500 to-gray-600" />
         </motion.h2>
 
-        <div className="relative w-full grid gap-6 before:absolute before:left-[calc(20%+12px)] before:top-0 before:h-full before:w-1 before:bg-gradient-to-b from-purple-500/20 to-blue-600/20 before:ml-[-1px]">
+        <div className="grid grid-cols-1 md:gap-4 gap-7 md:grid-cols-2">
           {EXPERIENCES.map((experience, index) => (
             <motion.div 
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, delay: index * 0.15 }}
+              viewport={{ once: true, margin: "-50px" }}
               className="relative group"
             >
-              
-              {/* Experience card */}
-              <div className="w-full p-6 transition-all border shadow-2xl rounded-3xl bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-xl border-white/10 hover:border-white/20">
-                <div className="flex flex-col gap-8 lg:flex-row">
-                  {/* Year */}
-                  <motion.div 
-                    className="lg:w-1/4"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.2 }}
-                  >
-                    <p className="text-lg font-semibold text-purple-400">
-                      {experience.year}
-                    </p>
-                  </motion.div>
+              {/* Experience card with glassmorphism */}
+              <div className="h-full p-7 transition-all duration-300 border rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border-white/20 hover:border-gray-500/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(107,114,128,0.2)] group-hover:transform group-hover:scale-[1.02]">
+                <div className="relative">
+                  {/* Year badge */}
+                  <div className="absolute px-4 py-2 border rounded-lg shadow-lg -top-12 right-2 bg-gradient-to-r from-gray-600/80 to-gray-700/80 backdrop-blur-sm border-white/10">
+                    <p className="text-lg font-bold text-white">{experience.year}</p>
+                  </div>
+                  
+                  {/* Company badge */}
+                  <div className="inline-flex items-center px-4 py-2 mb-5 text-sm font-medium text-gray-200 transition-all duration-300 border rounded-full cursor-pointer bg-gradient-to-r from-gray-500/30 to-gray-600/30 border-gray-500/30 hover:border-gray-400/50">
+                    @ {experience.company}
+                    <FiArrowUpRight className="ml-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </div>
 
-                  {/* Content */}
-                  <div className="space-y-6 lg:w-3/4">
-                    <motion.div
-                      initial={{ opacity: 0, x: 30 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.4 }}
-                    >
-                      <h3 className="mb-2 text-2xl font-bold text-stone-100">
-                        {experience.role}
-                        <span className="inline-block px-3 py-1 ml-2 text-sm font-medium rounded-full bg-gradient-to-r from-purple-500 to-blue-600 text-stone-100">
-                          @ {experience.company}
-                          <FiArrowUpRight className="inline-block ml-1" />
-                        </span>
-                      </h3>
-                      <p className="text-lg leading-relaxed text-stone-300">
-                        {experience.description}
-                      </p>
-                    </motion.div>
-
-                    {/* Technologies */}
-                    <motion.div 
-                      className="flex flex-wrap gap-3"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ delay: 0.6 }}
-                    >
-                      {experience.technologies.map((tech, techIndex) => (
-                        <div
-                          key={techIndex}
-                          className="px-3 py-1.5 text-sm rounded-full bg-white/5 border border-white/10 backdrop-blur-sm text-stone-200 flex items-center gap-2 hover:bg-white/10 transition-colors"
-                        >
-                          {techIcons[tech] || null}
-                          {tech}
-                        </div>
-                      ))}
-                    </motion.div>
+                  {/* Role */}
+                  <h3 className="mb-4 text-2xl font-bold text-gray-100">
+                    {experience.role}
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="mb-6 text-base leading-relaxed text-gray-300">
+                    {experience.description}
+                  </p>
+                  
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2.5">
+                    {experience.technologies.map((tech, techIndex) => (
+                      <motion.div
+                        key={techIndex}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.3 + (techIndex * 0.1) }}
+                        className="px-3 py-1.5 text-sm rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-gray-200 flex items-center gap-2 hover:bg-white/20 hover:border-white/30 transition-all duration-300 cursor-default"
+                      >
+                        {techIcons[tech] || null}
+                        {tech}
+                      </motion.div>
+                    ))}
                   </div>
                 </div>
+
+                {/* Decorative elements */}
+                <div className="absolute w-24 h-24 transition-opacity rounded-full -bottom-2 -right-2 bg-gradient-to-br from-gray-500/20 to-gray-600/20 blur-2xl opacity-70 group-hover:opacity-100"></div>
+                <div className="absolute w-20 h-20 rounded-full -top-2 -left-2 bg-gradient-to-br from-gray-500/20 to-gray-600/20 blur-xl opacity-70"></div>
               </div>
             </motion.div>
           ))}

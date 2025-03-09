@@ -349,7 +349,6 @@ const TechCard = ({ tech, index }) => {
                   }}
                 />
               </motion.div>
-              
               {/* Skill level indicator */}
               <motion.span
                 className="absolute text-[10px] flex items-center justify-center font-medium text-white/80"
