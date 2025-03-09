@@ -2,131 +2,117 @@ import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
 
+const ProjectCard = ({ project, index }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true, margin: "-50px" }}
+      className="relative group"
+    >
+      <div className="h-full transition-all duration-300 border rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border-white/20 hover:border-gray-500/40 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(107,114,128,0.2)] group-hover:transform group-hover:scale-[1.02]">
+        {/* Image container */}
+        <div className="relative overflow-hidden rounded-t-2xl aspect-video">
+          <motion.img
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            src={project.image}
+            alt={project.title}
+            className="object-cover w-full h-full"
+            loading="lazy"
+          />
+          
+          {/* Overlay gradient */}
+          <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:opacity-100"></div>
+          
+          {/* Link button on hover */}
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute flex items-center gap-2 px-4 py-2 font-medium text-white transition-all duration-300 rounded-full opacity-0 bottom-4 right-4 bg-white/20 backdrop-blur-sm group-hover:opacity-100 hover:bg-white/30"
+            >
+              View <FiExternalLink />
+            </a>
+          )}
+        </div>
+
+        {/* Content */}
+        <div className="p-5">
+          <h3 className="mb-3 text-xl font-bold tracking-tight text-gray-100">
+            {project.title}
+          </h3>
+          <p className="mb-4 text-sm text-gray-300 line-clamp-3">
+            {project.description}
+          </p>
+          
+          {/* Technologies */}
+          {project.technologies && (
+            <div className="flex flex-wrap gap-2 mt-auto">
+              {project.technologies.slice(0, 3).map((tech, techIndex) => (
+                <span
+                  key={techIndex}
+                  className="px-2.5 py-1 text-xs rounded-full bg-white/10 text-gray-300 border border-white/10"
+                >
+                  {tech}
+                </span>
+              ))}
+              {project.technologies.length > 3 && (
+                <span className="px-2.5 py-1 text-xs rounded-full bg-white/10 text-gray-300 border border-white/10">
+                  +{project.technologies.length - 3}
+                </span>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* Decorative elements */}
+        <div className="absolute w-16 h-16 transition-opacity rounded-full -bottom-2 -right-2 bg-gradient-to-br from-gray-500/20 to-gray-600/20 blur-xl opacity-70 group-hover:opacity-100"></div>
+      </div>
+    </motion.div>
+  );
+};
+
 const Projects = () => {
   return (
-    <section className="relative py-24">
-      {/* Background decoration */}
-      <div className="absolute inset-0 -z-10 opacity-40">
-        <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-purple-500/5 to-transparent"></div>
-        <div className="absolute rounded-full -top-40 -left-40 w-80 h-80 bg-purple-500/5 blur-3xl"></div>
-        <div className="absolute rounded-full top-1/2 -right-40 w-80 h-80 bg-blue-500/5 blur-3xl"></div>
-      </div>
-
+    <section className="py-16 mb-10 bg-gradient-to-b rounded-xl from-stone-950 to-stone-900/90" id="projects">
       <div className="container px-4 mx-auto">
         {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mb-16 text-center md:mb-24"
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="mb-16 text-5xl font-bold text-center text-transparent md:text-6xl bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text"
         >
-          <h2 className="mb-4 text-4xl font-bold text-transparent md:text-5xl bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text">
-            Graphics Portfolio
-          </h2>
-          <p className="max-w-2xl mx-auto text-lg text-stone-400">
-            Creative designs and visual experiences crafted with precision and artistic flair
-          </p>
-          <div className="w-24 h-1 mx-auto mt-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></div>
-        </motion.div>
+          Featured Projects
+          <div className="w-24 h-1 mx-auto mt-4 rounded-full bg-gradient-to-r from-gray-500 to-gray-600" />
+        </motion.h2>
 
-        {/* Projects grid */}
-        <div className="space-y-16 md:space-y-24">
+        {/* Project Grid */}
+        <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-2">
           {PROJECTS.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: index * 0.1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              className="group"
-            >
-              {/* Project card with glassmorphism */}
-              <div className="overflow-hidden border shadow-lg rounded-2xl bg-white/5 backdrop-blur-md border-white/10">
-                <div className="flex flex-col md:flex-row">
-                  {/* Image container */}
-                  <div className="w-full p-6 md:w-2/5 md:p-8">
-                    <div className="overflow-hidden rounded-xl aspect-[4/3] shadow-lg relative group-hover:shadow-xl transition-all duration-500">
-                      <motion.img
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.5 }}
-                        src={project.image}
-                        alt={project.title}
-                        className="object-cover object-center w-full h-full"
-                        loading="lazy"
-                      />
-                      
-                      {/* Overlay gradient */}
-                      <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 via-transparent to-transparent group-hover:opacity-100"></div>
-                      
-                      {/* View link if available */}
-                      {project.link && (
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="absolute flex items-center gap-2 px-4 py-2 text-white transition-all duration-300 rounded-full opacity-0 bottom-4 right-4 bg-white/20 backdrop-blur-sm group-hover:opacity-100 hover:bg-white/30"
-                        >
-                          <span className="font-medium">View Project</span>
-                          <FiExternalLink />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Content container */}
-                  <div className="flex flex-col justify-center w-full p-6 md:w-3/5 md:p-8">
-                    <motion.h3
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.2, duration: 0.5 }}
-                      viewport={{ once: true }}
-                      className="mb-4 text-2xl font-bold md:text-3xl text-stone-100"
-                    >
-                      {project.title}
-                    </motion.h3>
-
-                    <motion.p
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ delay: 0.3, duration: 0.5 }}
-                      viewport={{ once: true }}
-                      className="mb-6 text-base leading-relaxed md:text-lg text-stone-300"
-                    >
-                      {project.description}
-                    </motion.p>
-
-                    {/* Technologies */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.4, duration: 0.5 }}
-                      viewport={{ once: true }}
-                      className="mt-auto"
-                    >
-                      <h4 className="mb-3 text-sm tracking-wider uppercase text-stone-500">Technologies</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="px-3 py-1.5 text-sm rounded-full bg-stone-800/70 text-stone-300 backdrop-blur-sm border border-stone-700/50"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </motion.div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Background glow on hover */}
-              <div className="absolute inset-0 transition-opacity duration-500 opacity-0 -z-10 group-hover:opacity-30">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-3xl"></div>
-              </div>
-            </motion.div>
+            <ProjectCard key={index} project={project} index={index} />
           ))}
         </div>
+
+        {/* Optional - Featured Project Highlight */}
+        {PROJECTS[0] && PROJECTS[0].featured && (
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-16"
+          >
+            <div className="p-6 border rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border-white/20">
+              <h3 className="mb-4 text-2xl font-semibold text-center text-gray-100">Featured Project</h3>
+              {/* Featured project content would go here */}
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   );
