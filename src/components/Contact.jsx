@@ -1,10 +1,11 @@
 import { useState, useRef } from "react";
-import { CONTACT } from "../constants";
+import { CONTACT, PRICING } from "../constants";
 import { motion, useInView } from "framer-motion";
 import { FaLocationPin, FaGithub, FaLinkedin, FaTwitter, FaDribbble, FaBehance } from "react-icons/fa6";
 import { BiPhoneOutgoing } from "react-icons/bi";
 import { TfiEmail } from "react-icons/tfi";
 import { IoSend } from "react-icons/io5";
+import { FiChevronDown } from "react-icons/fi";
 
 const Contact = () => {
   // Form state management
@@ -12,6 +13,7 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
+    service: "", // Added service field
   });
   const [formStatus, setFormStatus] = useState({
     submitted: false,
@@ -26,6 +28,17 @@ const Contact = () => {
   const isHeaderInView = useInView(headerRef, { once: true });
   const isFormInView = useInView(formRef, { once: true, margin: "-100px 0px" });
   const isContactInfoInView = useInView(contactInfoRef, { once: true, margin: "-100px 0px" });
+
+  // Generate service options from PRICING constant
+  const serviceOptions = [];
+  PRICING.forEach(service => {
+    service.tiers.forEach(tier => {
+      serviceOptions.push({
+        value: `${service.title} - ${tier.name}`,
+        label: `${service.title}: ${tier.name} (${tier.price})`
+      });
+    });
+  });
 
   // Handle form input changes
   const handleChange = (e) => {
@@ -44,7 +57,9 @@ const Contact = () => {
       setFormStatus({ submitted: true, submitting: false, error: null });
     }, 2000);
 
-    window.location.href = `mailto:adisadaniel4@gmail.com?subject=Contact Form Submission&body=Hi, My name is ${formData.name}. ${formData.message} (${formData.email})`;
+    // Prepare email body with selected service
+    const serviceInfo = formData.service ? `\n\nI'm interested in: ${formData.service}` : '';
+    window.location.href = `mailto:adisadaniel4@gmail.com?subject=Contact Form Submission&body=Hi, My name is ${formData.name}. ${formData.message}${serviceInfo} (${formData.email})`;
   };
 
   return (
@@ -129,6 +144,32 @@ const Contact = () => {
                         className="w-full px-4 py-3 border rounded-lg bg-white/5 border-white/10 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 text-stone-100 placeholder-stone-500"
                         placeholder="john@example.com"
                       />
+                    </div>
+                    
+                    {/* Service Selection Dropdown */}
+                    <div>
+                      <label htmlFor="service" className="block mb-2 text-sm font-medium text-stone-300">
+                        I'm interested in (Optional)
+                      </label>
+                      <div className="relative">
+                        <select
+                          id="service"
+                          name="service"
+                          value={formData.service}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border rounded-lg appearance-none bg-white/5 border-white/10 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 text-stone-100"
+                        >
+                          <option value="">Select a service (Optional)</option>
+                          {serviceOptions.map((option, index) => (
+                            <option key={index} value={option.value}>
+                              {option.label}
+                            </option>
+                          ))}
+                        </select>
+                        <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-stone-400">
+                          <FiChevronDown />
+                        </div>
+                      </div>
                     </div>
                     
                     <div>

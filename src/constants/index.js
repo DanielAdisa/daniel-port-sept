@@ -188,10 +188,11 @@ export const PRICING = [
           "3 unique concepts",
           "Unlimited revisions",
           "All source files",
-          "High resolution files"
+          "High resolution files",
+          "Basic brand guidelines document"
         ],
-        originalPrice: "₦100,000",
-        price: "₦80,000",
+        originalPrice: "₦120,000",
+        price: "₦96,000",
         discount: 20,
         period: "per project"
       },
@@ -202,9 +203,12 @@ export const PRICING = [
           "Double-sided design",
           "Print ready files",
           "2 revision rounds",
-          "Quick 48hr delivery"
+          "Quick 48hr delivery",
+          "Source files included"
         ],
-        price: "₦50,000",
+        originalPrice: "₦60,000",
+        price: "₦48,000",
+        discount: 20,
         period: "per design"
       },
       {
@@ -214,11 +218,12 @@ export const PRICING = [
           "Photorealistic rendering",
           "Multiple camera angles",
           "Custom texturing",
-          "One revision cycle"
+          "Two revision cycles",
+          "Two different lighting setups"
         ],
-        originalPrice: "₦200,000",
-        price: "₦150,000",
-        discount: 25,
+        originalPrice: "₦250,000",
+        price: "₦200,000",
+        discount: 20,
         period: "per model"
       },
     ],
@@ -233,9 +238,10 @@ export const PRICING = [
           "Up to 5 pages",
           "Mobile responsive design",
           "Basic SEO setup",
-          "Contact form"
+          "Contact form",
+          "SSL certificate setup"
         ],
-        price: "₦300,000",
+        price: "₦350,000",
         period: "one-time payment"
       },
       {
@@ -246,10 +252,11 @@ export const PRICING = [
           "Secure payment integration",
           "Inventory management",
           "Order tracking",
-          "Admin dashboard"
+          "Admin dashboard",
+          "Basic email marketing integration"
         ],
-        originalPrice: "₦800,000",
-        price: "₦680,000",
+        originalPrice: "₦900,000",
+        price: "₦765,000",
         discount: 15,
         period: "one-time payment"
       },
@@ -261,9 +268,10 @@ export const PRICING = [
           "Database integration",
           "User authentication",
           "API development",
-          "3 months support"
+          "3 months support",
+          "Performance optimization"
         ],
-        price: "₦1,200,000",
+        price: "₦1,500,000",
         period: "starting price"
       },
     ],
@@ -277,13 +285,14 @@ export const PRICING = [
         features: [
           "HTML, CSS, JavaScript",
           "React framework",
-          "12 hours of instruction",
+          "20 hours of instruction",
           "Practice projects",
-          "Certificate of completion"
+          "Certificate of completion",
+          "Access to private community"
         ],
-        originalPrice: "₦150,000",
-        price: "₦125,000",
-        discount: 17,
+        originalPrice: "₦180,000",
+        price: "₦153,000",
+        discount: 15,
         period: "per course"
       },
       {
@@ -293,10 +302,13 @@ export const PRICING = [
           "Adobe Photoshop",
           "Adobe Illustrator",
           "Design principles",
-          "10 hours of instruction",
-          "Portfolio development"
+          "15 hours of instruction",
+          "Portfolio development",
+          "Template files included"
         ],
-        price: "₦100,000",
+        originalPrice: "₦120,000",
+        price: "₦102,000",
+        discount: 15,
         period: "per course"
       },
       {
@@ -307,11 +319,12 @@ export const PRICING = [
           "3D modeling techniques",
           "Texturing and materials",
           "Lighting and rendering",
-          "15 hours of instruction"
+          "25 hours of instruction",
+          "Software installation guide"
         ],
-        originalPrice: "₦200,000",
-        price: "₦172,000",
-        discount: 14,
+        originalPrice: "₦220,000",
+        price: "₦187,000",
+        discount: 15,
         period: "per course"
       },
     ],
