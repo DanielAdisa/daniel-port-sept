@@ -177,15 +177,14 @@ export const CONTACT = {
   location: "https://www.google.com/maps/dir//Aso+Rock,+City+Centre+900103,+Federal+Capital+Territory/@9.0761989,7.5144294,14z/data=!4m18!1m8!3m7!1s0x104e0991e66fddfb:0x9d4da92741f9018!2sAso+Rock!8m2!3d9.083333!4d7.536111!15sCghhc28gcm9ja1oKIghhc28gcm9ja5IBBHBlYWvgAQA!16zL20vMDdnMGpf!4m8!1m0!1m5!1m1!1s0x104e0991e66fddfb:0x9d4da92741f9018!2m2!1d7.536111!2d9.083333!3e4?entry=ttu&g_ep=EgoyMDI0MDkyMi4wIKXMDSoASAFQAw%3D%3D",
 };
 
-// Update exchange rates to more realistic values
 const exchangeRates = {
-  NGN: 1500, // More realistic NGN to USD rate
-  EUR: 0.92, // More realistic EUR to USD rate 
-  GBP: 0.78, // More realistic GBP to USD rate
-  GHS: 12.5, // More realistic GHS to USD rate
+  NGN: 1515, 
+  EUR: 0.92, 
+  GBP: 0.78,
+  GHS: 15.54,
 };
 
-// Helper function to properly convert and format currency values
+
 const convertCurrency = (usdPrice, rate) => (usdPrice * rate).toFixed(2);
 
 export const PRICING = [
@@ -193,7 +192,7 @@ export const PRICING = [
     title: "Graphics Design",
     tiers: [
       {
-        name: "Logo Design",
+        name: "3D Logo Design",
         description: "Professional logo design to represent your brand identity",
         features: [
           "3 unique concepts",
@@ -203,18 +202,18 @@ export const PRICING = [
           "Basic brand guidelines document"
         ],
         originalPrice: {
-          USD: 300,
-          NGN: convertCurrency(300, exchangeRates.NGN),
-          EUR: convertCurrency(300, exchangeRates.EUR),
-          GBP: convertCurrency(300, exchangeRates.GBP),
-          GHS: convertCurrency(300, exchangeRates.GHS),
-        },
-        price: {
           USD: 240,
           NGN: convertCurrency(240, exchangeRates.NGN),
           EUR: convertCurrency(240, exchangeRates.EUR),
           GBP: convertCurrency(240, exchangeRates.GBP),
           GHS: convertCurrency(240, exchangeRates.GHS),
+        },
+        price: {
+          USD: 200,
+          NGN: convertCurrency(200, exchangeRates.NGN),
+          EUR: convertCurrency(200, exchangeRates.EUR),
+          GBP: convertCurrency(200, exchangeRates.GBP),
+          GHS: convertCurrency(200, exchangeRates.GHS),
         },
         discount: 20,
         period: "per project"
@@ -230,20 +229,20 @@ export const PRICING = [
           "Source files included"
         ],
         originalPrice: {
-          USD: 150,
-          NGN: convertCurrency(150, exchangeRates.NGN),
-          EUR: convertCurrency(150, exchangeRates.EUR),
-          GBP: convertCurrency(150, exchangeRates.GBP),
-          GHS: convertCurrency(150, exchangeRates.GHS),
+          USD: 75,
+          NGN: convertCurrency(75, exchangeRates.NGN),
+          EUR: convertCurrency(75, exchangeRates.EUR),
+          GBP: convertCurrency(75, exchangeRates.GBP),
+          GHS: convertCurrency(75, exchangeRates.GHS),
         },
         price: {
-          USD: 120,
-          NGN: convertCurrency(120, exchangeRates.NGN),
-          EUR: convertCurrency(120, exchangeRates.EUR),
-          GBP: convertCurrency(120, exchangeRates.GBP),
-          GHS: convertCurrency(120, exchangeRates.GHS),
+          USD: 50,
+          NGN: convertCurrency(50, exchangeRates.NGN),
+          EUR: convertCurrency(50, exchangeRates.EUR),
+          GBP: convertCurrency(50, exchangeRates.GBP),
+          GHS: convertCurrency(50, exchangeRates.GHS),
         },
-        discount: 20,
+        discount: 33.33,
         period: "per design"
       },
       {
@@ -257,20 +256,20 @@ export const PRICING = [
           "Two different lighting setups"
         ],
         originalPrice: {
-          USD: 625,
-          NGN: convertCurrency(625, exchangeRates.NGN),
-          EUR: convertCurrency(625, exchangeRates.EUR),
-          GBP: convertCurrency(625, exchangeRates.GBP),
-          GHS: convertCurrency(625, exchangeRates.GHS),
+          USD: 400,
+          NGN: convertCurrency(400, exchangeRates.NGN),
+          EUR: convertCurrency(400, exchangeRates.EUR),
+          GBP: convertCurrency(400, exchangeRates.GBP),
+          GHS: convertCurrency(400, exchangeRates.GHS),
         },
         price: {
-          USD: 500,
-          NGN: convertCurrency(500, exchangeRates.NGN),
-          EUR: convertCurrency(500, exchangeRates.EUR),
-          GBP: convertCurrency(500, exchangeRates.GBP),
-          GHS: convertCurrency(500, exchangeRates.GHS),
+          USD: 350,
+          NGN: convertCurrency(350, exchangeRates.NGN),
+          EUR: convertCurrency(350, exchangeRates.EUR),
+          GBP: convertCurrency(350, exchangeRates.GBP),
+          GHS: convertCurrency(350, exchangeRates.GHS),
         },
-        discount: 20,
+        discount: 12.5,
         period: "per model"
       },
     ],

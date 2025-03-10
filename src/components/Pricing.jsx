@@ -88,19 +88,25 @@ const Pricing = () => {
   
   // Helper to format currency values
   const formatCurrency = (amount) => {
+    // Format number with thousand separators and only show decimals if needed
+    const formattedAmount = new Intl.NumberFormat('en-US', {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 2
+    }).format(amount);
+    
     switch (currency) {
       case "USD":
-        return `$${amount.toFixed(2)}`;
+        return `$${formattedAmount}`;
       case "GBP":
-        return `£${amount.toFixed(2)}`;
+        return `£${formattedAmount}`;
       case "EUR":
-        return `€${amount.toFixed(2)}`;
+        return `€${formattedAmount}`;
       case "NGN":
-        return `₦${amount.toFixed(2)}`;
+        return `₦${formattedAmount}`;
       case "GHS":
-        return `₵${amount.toFixed(2)}`;
+        return `₵${formattedAmount}`;
       default:
-        return `$${amount.toFixed(2)}`;
+        return `$${formattedAmount}`;
     }
   };
 
@@ -146,17 +152,31 @@ const Pricing = () => {
 
       <div className="container relative px-4 mx-auto">
         {/* Section header with scroll-based fade */}
-        <motion.div
+        <motion.h2 
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="mb-16 text-5xl font-bold text-center text-transparent md:text-6xl bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text"
+        >
+          Pricing
+          
+          <div className="w-24 h-1 mx-auto mt-4 rounded-full bg-gradient-to-r from-gray-500 to-gray-600" />
+          <p className="mt-4 text-sm font-normal text-gray-300">
+            Transparent pricing tailored to your needs
+          </p>
+        </motion.h2>
+        {/* <motion.div
           style={{ opacity: textOpacity }}
           className="max-w-3xl mx-auto mb-10 text-center"
         >
           <h2 className="mb-4 text-4xl font-bold text-transparent bg-gradient-to-r from-white to-gray-300 bg-clip-text">
-            Pricing
+            
           </h2>
           <p className="text-gray-300">
             Transparent pricing tailored to your needs
           </p>
-        </motion.div>
+        </motion.div> */}
         
         {/* Currency Selector */}
         <CurrencySelector />
