@@ -128,20 +128,7 @@ const App = () => {
             )}
           </Suspense>
         </div>
-        
-        {/* Pricing button */}
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          onClick={scrollToPricing}
-          className="fixed z-50 p-3 transition-colors rounded-full shadow-lg bottom-20 right-8 bg-stone-800/80 backdrop-blur-sm hover:bg-stone-700"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <BiDollar size={20} />
-        </motion.button>
-        
+
         {/* Scroll to top button */}
         {scrollPosition > 600 && (
           <motion.button
@@ -149,7 +136,7 @@ const App = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="fixed z-50 p-3 transition-colors rounded-full shadow-lg bottom-8 right-8 bg-stone-800/80 backdrop-blur-sm hover:bg-stone-700"
+            className="fixed z-50 p-3 transition-colors rounded-full shadow-lg bottom-16 right-4 bg-stone-800/80 backdrop-blur-sm hover:bg-stone-700"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -158,6 +145,21 @@ const App = () => {
             </svg>
           </motion.button>
         )}
+        
+        {/* Pricing button */}
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          onClick={scrollToPricing}
+          className="fixed z-50 p-3 transition-colors rounded-full shadow-lg bottom-4 right-4 bg-stone-800/80 backdrop-blur-sm hover:bg-stone-700"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <BiDollar size={20} />
+        </motion.button>
+        
+        
       </motion.div>
     </AnimatePresence>
   )
