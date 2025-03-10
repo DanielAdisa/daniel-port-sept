@@ -1,7 +1,8 @@
-import { useState, useEffect, lazy, Suspense } from "react"
+import { useState, useEffect, lazy, Suspense, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Navbar from "./components/Navbar"
 import Pricing from "./components/Pricing" // Import the Pricing component
+import { BiDollar } from "react-icons/bi"
 
 // Lazy load components for better performance
 const Hero = lazy(() => import("./components/Hero"))
@@ -21,6 +22,7 @@ const LoadingSpinner = () => (
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [scrollPosition, setScrollPosition] = useState(0)
+  const pricingRef = useRef(null)
 
   useEffect(() => {
     // Simulate loading state
@@ -35,6 +37,10 @@ const App = () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
+  const scrollToPricing = () => {
+    pricingRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <AnimatePresence>
@@ -107,7 +113,9 @@ const App = () => {
                   <Projectslink />
                   <Projects />
                   <Experience />
-                  <Pricing /> {/* Add the Pricing component */}
+                  <div ref={pricingRef}>
+                    <Pricing />
+                  </div>
                   <Contact />
                   
                   {/* Footer */}
@@ -120,6 +128,19 @@ const App = () => {
             )}
           </Suspense>
         </div>
+        
+        {/* Pricing button */}
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          onClick={scrollToPricing}
+          className="fixed z-50 p-3 transition-colors rounded-full shadow-lg bottom-20 right-8 bg-stone-800/80 backdrop-blur-sm hover:bg-stone-700"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <BiDollar size={20} />
+        </motion.button>
         
         {/* Scroll to top button */}
         {scrollPosition > 600 && (

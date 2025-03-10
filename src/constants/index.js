@@ -177,6 +177,17 @@ export const CONTACT = {
   location: "https://www.google.com/maps/dir//Aso+Rock,+City+Centre+900103,+Federal+Capital+Territory/@9.0761989,7.5144294,14z/data=!4m18!1m8!3m7!1s0x104e0991e66fddfb:0x9d4da92741f9018!2sAso+Rock!8m2!3d9.083333!4d7.536111!15sCghhc28gcm9ja1oKIghhc28gcm9ja5IBBHBlYWvgAQA!16zL20vMDdnMGpf!4m8!1m0!1m5!1m1!1s0x104e0991e66fddfb:0x9d4da92741f9018!2m2!1d7.536111!2d9.083333!3e4?entry=ttu&g_ep=EgoyMDI0MDkyMi4wIKXMDSoASAFQAw%3D%3D",
 };
 
+// Update exchange rates to more realistic values
+const exchangeRates = {
+  NGN: 1500, // More realistic NGN to USD rate
+  EUR: 0.92, // More realistic EUR to USD rate 
+  GBP: 0.78, // More realistic GBP to USD rate
+  GHS: 12.5, // More realistic GHS to USD rate
+};
+
+// Helper function to properly convert and format currency values
+const convertCurrency = (usdPrice, rate) => (usdPrice * rate).toFixed(2);
+
 export const PRICING = [
   {
     title: "Graphics Design",
@@ -191,8 +202,20 @@ export const PRICING = [
           "High resolution files",
           "Basic brand guidelines document"
         ],
-        originalPrice: "₦120,000",
-        price: "₦96,000",
+        originalPrice: {
+          USD: 300,
+          NGN: convertCurrency(300, exchangeRates.NGN),
+          EUR: convertCurrency(300, exchangeRates.EUR),
+          GBP: convertCurrency(300, exchangeRates.GBP),
+          GHS: convertCurrency(300, exchangeRates.GHS),
+        },
+        price: {
+          USD: 240,
+          NGN: convertCurrency(240, exchangeRates.NGN),
+          EUR: convertCurrency(240, exchangeRates.EUR),
+          GBP: convertCurrency(240, exchangeRates.GBP),
+          GHS: convertCurrency(240, exchangeRates.GHS),
+        },
         discount: 20,
         period: "per project"
       },
@@ -206,8 +229,20 @@ export const PRICING = [
           "Quick 48hr delivery",
           "Source files included"
         ],
-        originalPrice: "₦60,000",
-        price: "₦48,000",
+        originalPrice: {
+          USD: 150,
+          NGN: convertCurrency(150, exchangeRates.NGN),
+          EUR: convertCurrency(150, exchangeRates.EUR),
+          GBP: convertCurrency(150, exchangeRates.GBP),
+          GHS: convertCurrency(150, exchangeRates.GHS),
+        },
+        price: {
+          USD: 120,
+          NGN: convertCurrency(120, exchangeRates.NGN),
+          EUR: convertCurrency(120, exchangeRates.EUR),
+          GBP: convertCurrency(120, exchangeRates.GBP),
+          GHS: convertCurrency(120, exchangeRates.GHS),
+        },
         discount: 20,
         period: "per design"
       },
@@ -221,8 +256,20 @@ export const PRICING = [
           "Two revision cycles",
           "Two different lighting setups"
         ],
-        originalPrice: "₦250,000",
-        price: "₦200,000",
+        originalPrice: {
+          USD: 625,
+          NGN: convertCurrency(625, exchangeRates.NGN),
+          EUR: convertCurrency(625, exchangeRates.EUR),
+          GBP: convertCurrency(625, exchangeRates.GBP),
+          GHS: convertCurrency(625, exchangeRates.GHS),
+        },
+        price: {
+          USD: 500,
+          NGN: convertCurrency(500, exchangeRates.NGN),
+          EUR: convertCurrency(500, exchangeRates.EUR),
+          GBP: convertCurrency(500, exchangeRates.GBP),
+          GHS: convertCurrency(500, exchangeRates.GHS),
+        },
         discount: 20,
         period: "per model"
       },
@@ -241,7 +288,13 @@ export const PRICING = [
           "Contact form",
           "SSL certificate setup"
         ],
-        price: "₦350,000",
+        price: {
+          USD: 875,
+          NGN: convertCurrency(875, exchangeRates.NGN),
+          EUR: convertCurrency(875, exchangeRates.EUR),
+          GBP: convertCurrency(875, exchangeRates.GBP),
+          GHS: convertCurrency(875, exchangeRates.GHS),
+        },
         period: "one-time payment"
       },
       {
@@ -255,8 +308,20 @@ export const PRICING = [
           "Admin dashboard",
           "Basic email marketing integration"
         ],
-        originalPrice: "₦900,000",
-        price: "₦765,000",
+        originalPrice: {
+          USD: 2250,
+          NGN: convertCurrency(2250, exchangeRates.NGN),
+          EUR: convertCurrency(2250, exchangeRates.EUR),
+          GBP: convertCurrency(2250, exchangeRates.GBP),
+          GHS: convertCurrency(2250, exchangeRates.GHS),
+        },
+        price: {
+          USD: 1912.50,
+          NGN: convertCurrency(1912.50, exchangeRates.NGN),
+          EUR: convertCurrency(1912.50, exchangeRates.EUR),
+          GBP: convertCurrency(1912.50, exchangeRates.GBP),
+          GHS: convertCurrency(1912.50, exchangeRates.GHS),
+        },
         discount: 15,
         period: "one-time payment"
       },
@@ -271,7 +336,13 @@ export const PRICING = [
           "3 months support",
           "Performance optimization"
         ],
-        price: "₦1,500,000",
+        price: {
+          USD: 3750,
+          NGN: convertCurrency(3750, exchangeRates.NGN),
+          EUR: convertCurrency(3750, exchangeRates.EUR),
+          GBP: convertCurrency(3750, exchangeRates.GBP),
+          GHS: convertCurrency(3750, exchangeRates.GHS),
+        },
         period: "starting price"
       },
     ],
@@ -290,8 +361,20 @@ export const PRICING = [
           "Certificate of completion",
           "Access to private community"
         ],
-        originalPrice: "₦180,000",
-        price: "₦153,000",
+        originalPrice: {
+          USD: 450,
+          NGN: convertCurrency(450, exchangeRates.NGN),
+          EUR: convertCurrency(450, exchangeRates.EUR),
+          GBP: convertCurrency(450, exchangeRates.GBP),
+          GHS: convertCurrency(450, exchangeRates.GHS),
+        },
+        price: {
+          USD: 382.50,
+          NGN: convertCurrency(382.50, exchangeRates.NGN),
+          EUR: convertCurrency(382.50, exchangeRates.EUR),
+          GBP: convertCurrency(382.50, exchangeRates.GBP),
+          GHS: convertCurrency(382.50, exchangeRates.GHS),
+        },
         discount: 15,
         period: "per course"
       },
@@ -306,8 +389,20 @@ export const PRICING = [
           "Portfolio development",
           "Template files included"
         ],
-        originalPrice: "₦120,000",
-        price: "₦102,000",
+        originalPrice: {
+          USD: 300,
+          NGN: convertCurrency(300, exchangeRates.NGN),
+          EUR: convertCurrency(300, exchangeRates.EUR),
+          GBP: convertCurrency(300, exchangeRates.GBP),
+          GHS: convertCurrency(300, exchangeRates.GHS),
+        },
+        price: {
+          USD: 255,
+          NGN: convertCurrency(255, exchangeRates.NGN),
+          EUR: convertCurrency(255, exchangeRates.EUR),
+          GBP: convertCurrency(255, exchangeRates.GBP),
+          GHS: convertCurrency(255, exchangeRates.GHS),
+        },
         discount: 15,
         period: "per course"
       },
@@ -322,8 +417,20 @@ export const PRICING = [
           "25 hours of instruction",
           "Software installation guide"
         ],
-        originalPrice: "₦220,000",
-        price: "₦187,000",
+        originalPrice: {
+          USD: 550,
+          NGN: convertCurrency(550, exchangeRates.NGN),
+          EUR: convertCurrency(550, exchangeRates.EUR),
+          GBP: convertCurrency(550, exchangeRates.GBP),
+          GHS: convertCurrency(550, exchangeRates.GHS),
+        },
+        price: {
+          USD: 467.50,
+          NGN: convertCurrency(467.50, exchangeRates.NGN),
+          EUR: convertCurrency(467.50, exchangeRates.EUR),
+          GBP: convertCurrency(467.50, exchangeRates.GBP),
+          GHS: convertCurrency(467.50, exchangeRates.GHS),
+        },
         discount: 15,
         period: "per course"
       },

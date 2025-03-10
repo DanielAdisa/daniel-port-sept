@@ -1,12 +1,14 @@
 import { PRICING } from "../constants";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FiCheck, FiChevronDown } from "react-icons/fi";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import axios from "axios"; // Import axios for API requests
 
 const Pricing = () => {
   const sectionRef = useRef(null);
   const [selectedService, setSelectedService] = useState("all");
-  
+  const [currency, setCurrency] = useState("NGN"); // Default currency is Naira
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
@@ -15,10 +17,117 @@ const Pricing = () => {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
+  // Fetch user's location and set currency
+  useEffect(() => {
+    const fetchLocation = async () => {
+      try {
+        const response = await axios.get("https://ipapi.co/json/");
+        const country = response.data.country;
+        if (country === "US") {
+          setCurrency("USD");
+        } else if (country === "GB") {
+          setCurrency("GBP");
+        } else if (country === "EU") {
+          setCurrency("EUR");
+        } else if (country === "NG") {
+          setCurrency("NGN");
+        } else if (country === "GH") {
+          setCurrency("GHS");
+        } else {
+          setCurrency("USD"); // Default to USD if not in specific countries
+        }
+      } catch (error) {
+        console.error("Error fetching location:", error);
+        setCurrency("USD"); // Fallback to USD on error
+      }
+    };
+    fetchLocation();
+  }, []);
+
   // Filter services based on selection
   const filteredPricing = selectedService === "all" 
     ? PRICING 
     : PRICING.filter(service => service.title.toLowerCase() === selectedService.toLowerCase());
+
+  // Function to convert prices based on currency
+  const convertPrice = (priceObj) => {
+    // If price is directly a number (for backward compatibility)
+    if (typeof priceObj === 'number') {
+      const rates = {
+        USD: 1,
+        GBP: 0.75,
+        EUR: 0.85,
+        NGN: 410,
+        GHS: 6,
+      };
+      const amount = priceObj * rates[currency];
+      return formatCurrency(amount);
+    }
+    
+    // If price is an object with currency keys
+    if (priceObj && typeof priceObj === 'object' && priceObj[currency]) {
+      return formatCurrency(parseFloat(priceObj[currency]));
+    }
+    
+    // Fallback to USD if the selected currency is not available
+    if (priceObj && typeof priceObj === 'object' && priceObj.USD) {
+      const rates = {
+        USD: 1,
+        GBP: 0.75,
+        EUR: 0.85,
+        NGN: 410,
+        GHS: 6,
+      };
+      const amount = parseFloat(priceObj.USD) * rates[currency];
+      return formatCurrency(amount);
+    }
+    
+    // Final fallback
+    return "Price unavailable";
+  };
+  
+  // Helper to format currency values
+  const formatCurrency = (amount) => {
+    switch (currency) {
+      case "USD":
+        return `$${amount.toFixed(2)}`;
+      case "GBP":
+        return `£${amount.toFixed(2)}`;
+      case "EUR":
+        return `€${amount.toFixed(2)}`;
+      case "NGN":
+        return `₦${amount.toFixed(2)}`;
+      case "GHS":
+        return `₵${amount.toFixed(2)}`;
+      default:
+        return `$${amount.toFixed(2)}`;
+    }
+  };
+
+  // Currency selector component
+  const CurrencySelector = () => (
+    <div className="flex justify-end mb-6">
+      <div className="inline-flex rounded-md shadow-sm">
+        {["USD", "GBP", "EUR", "NGN", "GHS"].map((curr) => (
+          <button
+            key={curr}
+            onClick={() => setCurrency(curr)}
+            className={`px-3 py-1.5 text-xs font-medium ${
+              currency === curr
+                ? "bg-white/20 text-white"
+                : "bg-white/5 text-gray-300 hover:bg-white/10"
+            } ${
+              curr === "USD" ? "rounded-l-md" : ""
+            } ${
+              curr === "GHS" ? "rounded-r-md" : ""
+            } border-r border-white/10 last:border-r-0`}
+          >
+            {curr}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <section
@@ -40,10 +149,21 @@ const Pricing = () => {
         <motion.div
           style={{ opacity: textOpacity }}
           className="max-w-3xl mx-auto mb-10 text-center"
-        ></motion.div>
+        >
+          <h2 className="mb-4 text-4xl font-bold text-transparent bg-gradient-to-r from-white to-gray-300 bg-clip-text">
+            Pricing
+          </h2>
+          <p className="text-gray-300">
+            Transparent pricing tailored to your needs
+          </p>
+        </motion.div>
+        
+        {/* Currency Selector */}
+        <CurrencySelector />
+        
         {/* Services grid with staggered animations */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-1">
-          {PRICING.map((service, index) => (
+          {filteredPricing.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
@@ -103,11 +223,11 @@ const Pricing = () => {
                         >
                           {tier.originalPrice && (
                             <span className="text-sm text-gray-400 line-through">
-                              {tier.originalPrice}
+                              {convertPrice(tier.originalPrice)}
                             </span>
                           )}
                           <span className="text-3xl font-bold tracking-tight text-transparent bg-gradient-to-r from-white to-gray-200 bg-clip-text">
-                            {tier.price}
+                            {convertPrice(tier.price)}
                           </span>
                           {tier.period && (
                             <span className="text-xs text-gray-400">{tier.period}</span>
