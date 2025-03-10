@@ -162,7 +162,7 @@ const Pricing = () => {
         <CurrencySelector />
         
         {/* Services grid with staggered animations */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-1">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-1 lg:grid-cols-1">
           {filteredPricing.map((service, index) => (
             <motion.div
               key={index}
