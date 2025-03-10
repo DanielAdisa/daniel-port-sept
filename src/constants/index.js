@@ -176,3 +176,145 @@ export const CONTACT = {
   email: "adisadaniel4@gmail.com",
   location: "https://www.google.com/maps/dir//Aso+Rock,+City+Centre+900103,+Federal+Capital+Territory/@9.0761989,7.5144294,14z/data=!4m18!1m8!3m7!1s0x104e0991e66fddfb:0x9d4da92741f9018!2sAso+Rock!8m2!3d9.083333!4d7.536111!15sCghhc28gcm9ja1oKIghhc28gcm9ja5IBBHBlYWvgAQA!16zL20vMDdnMGpf!4m8!1m0!1m5!1m1!1s0x104e0991e66fddfb:0x9d4da92741f9018!2m2!1d7.536111!2d9.083333!3e4?entry=ttu&g_ep=EgoyMDI0MDkyMi4wIKXMDSoASAFQAw%3D%3D",
 };
+
+export const PRICING = [
+  {
+    title: "Graphics Design",
+    tiers: [
+      {
+        name: "Logo Design",
+        description: "Professional logo design to represent your brand identity",
+        features: [
+          "3 unique concepts",
+          "Unlimited revisions",
+          "All source files",
+          "High resolution files"
+        ],
+        originalPrice: "₦100,000",
+        price: "₦80,000",
+        discount: 20,
+        period: "per project"
+      },
+      {
+        name: "Flyer Design",
+        description: "Eye-catching flyer designs for events and promotions",
+        features: [
+          "Double-sided design",
+          "Print ready files",
+          "2 revision rounds",
+          "Quick 48hr delivery"
+        ],
+        price: "₦50,000",
+        period: "per design"
+      },
+      {
+        name: "3D Design & Rendering",
+        description: "High-quality 3D designs for various applications",
+        features: [
+          "Photorealistic rendering",
+          "Multiple camera angles",
+          "Custom texturing",
+          "One revision cycle"
+        ],
+        originalPrice: "₦200,000",
+        price: "₦150,000",
+        discount: 25,
+        period: "per model"
+      },
+    ],
+  },
+  {
+    title: "Web Development",
+    tiers: [
+      {
+        name: "Basic Website",
+        description: "Perfect for small businesses and personal projects",
+        features: [
+          "Up to 5 pages",
+          "Mobile responsive design",
+          "Basic SEO setup",
+          "Contact form"
+        ],
+        price: "₦300,000",
+        period: "one-time payment"
+      },
+      {
+        name: "E-commerce Website",
+        description: "Everything you need to sell products online",
+        features: [
+          "Product catalog",
+          "Secure payment integration",
+          "Inventory management",
+          "Order tracking",
+          "Admin dashboard"
+        ],
+        originalPrice: "₦800,000",
+        price: "₦680,000",
+        discount: 15,
+        period: "one-time payment"
+      },
+      {
+        name: "Custom Web Application",
+        description: "Tailored solutions for complex business needs",
+        features: [
+          "Custom functionality",
+          "Database integration",
+          "User authentication",
+          "API development",
+          "3 months support"
+        ],
+        price: "₦1,200,000",
+        period: "starting price"
+      },
+    ],
+  },
+  {
+    title: "Skills Acquisition",
+    tiers: [
+      {
+        name: "Web Development Training",
+        description: "Learn to build professional websites from scratch",
+        features: [
+          "HTML, CSS, JavaScript",
+          "React framework",
+          "12 hours of instruction",
+          "Practice projects",
+          "Certificate of completion"
+        ],
+        originalPrice: "₦150,000",
+        price: "₦125,000",
+        discount: 17,
+        period: "per course"
+      },
+      {
+        name: "Graphics Design Training",
+        description: "Master the fundamentals of graphic design",
+        features: [
+          "Adobe Photoshop",
+          "Adobe Illustrator",
+          "Design principles",
+          "10 hours of instruction",
+          "Portfolio development"
+        ],
+        price: "₦100,000",
+        period: "per course"
+      },
+      {
+        name: "3D Design Training",
+        description: "Enter the exciting world of 3D modeling and rendering",
+        features: [
+          "Blender basics",
+          "3D modeling techniques",
+          "Texturing and materials",
+          "Lighting and rendering",
+          "15 hours of instruction"
+        ],
+        originalPrice: "₦200,000",
+        price: "₦172,000",
+        discount: 14,
+        period: "per course"
+      },
+    ],
+  },
+];
+

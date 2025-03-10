@@ -1,6 +1,7 @@
 import { useState, useEffect, lazy, Suspense } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Navbar from "./components/Navbar"
+import Pricing from "./components/Pricing" // Import the Pricing component
 
 // Lazy load components for better performance
 const Hero = lazy(() => import("./components/Hero"))
@@ -106,6 +107,7 @@ const App = () => {
                   <Projectslink />
                   <Projects />
                   <Experience />
+                  <Pricing /> {/* Add the Pricing component */}
                   <Contact />
                   
                   {/* Footer */}
