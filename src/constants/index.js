@@ -192,6 +192,28 @@ export const PRICING = [
     title: "Graphics Design",
     tiers: [
       {
+        name: "Professional 2D Logo Design",
+        description: "Custom logo creation for small businesses and startups with commercial use rights",
+        features: [
+          "3 initial concepts (not unlimited options)",
+          "4 revision rounds per concept",
+          "Vector source files (AI/EPS/PDF)",
+          "High-res PNG/JPG + transparent formats",
+          "1-page brand style guide (colors + fonts)",
+          "5 business day delivery",
+          "Commercial usage rights"
+        ],
+        price: {
+          USD: 50,
+          NGN: convertCurrency(50, exchangeRates.NGN),
+          EUR: convertCurrency(50, exchangeRates.EUR),
+          GBP: convertCurrency(50, exchangeRates.GBP),
+          GHS: convertCurrency(50, exchangeRates.GHS),
+        },
+        discount: 15, // More credible discount percentage
+        period: "flat project rate"
+      },
+      {
         name: "3D Logo Design",
         description: "Professional logo design to represent your brand identity",
         features: [
