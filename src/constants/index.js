@@ -192,7 +192,7 @@ export const PRICING = [
     title: "Graphics Design",
     tiers: [
       {
-        name: "Professional 2D Logo Design",
+        name: "2D Logo Design",
         description: "Custom logo creation for small businesses and startups with commercial use rights",
         features: [
           "3 initial concepts (not unlimited options)",
