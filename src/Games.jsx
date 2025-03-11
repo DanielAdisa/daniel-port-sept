@@ -27,6 +27,9 @@ const SnakeGame = () => {
   // Keyboard input handling
   useEffect(() => {
     const handleKeyDown = (e) => {
+      // Only respond to arrow keys
+      if (!['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+      
       if (!gameStarted && !gameOver) setGameStarted(true);
       switch (e.key) {
         case 'ArrowUp':
@@ -52,23 +55,44 @@ const SnakeGame = () => {
   // Mobile swipe handling
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
+    
     let touchStartX = null;
     let touchStartY = null;
 
     const handleTouchStart = (e) => {
-      if (!gameStarted && !gameOver) setGameStarted(true);
+      e.preventDefault(); // Prevent scrolling when touching the canvas
       const touch = e.touches[0];
       touchStartX = touch.clientX;
       touchStartY = touch.clientY;
     };
 
+    const handleTouchMove = (e) => {
+      e.preventDefault(); // Prevent scrolling
+    };
+
     const handleTouchEnd = (e) => {
+      e.preventDefault(); // Prevent any default behavior
+      
+      // Start the game on touch if not already started
+      if (!gameStarted && !gameOver) {
+        setGameStarted(true);
+        // Set an initial direction on first touch if no direction is set
+        if (direction.x === 0 && direction.y === 0) {
+          setDirection({ x: 1, y: 0 }); // Start moving right by default
+        }
+      }
+      
       if (touchStartX === null || touchStartY === null) return;
+      
       const touch = e.changedTouches[0];
       const touchEndX = touch.clientX;
       const touchEndY = touch.clientY;
       const diffX = touchEndX - touchStartX;
       const diffY = touchEndY - touchStartY;
+
+      // Only change direction if swipe is significant enough
+      if (Math.abs(diffX) < 10 && Math.abs(diffY) < 10) return;
 
       if (Math.abs(diffX) > Math.abs(diffY)) {
         if (diffX > 0 && direction.x !== -1) setDirection({ x: 1, y: 0 });
@@ -77,14 +101,18 @@ const SnakeGame = () => {
         if (diffY > 0 && direction.y !== -1) setDirection({ x: 0, y: 1 });
         else if (diffY < 0 && direction.y !== 1) setDirection({ x: 0, y: -1 });
       }
+      
       touchStartX = null;
       touchStartY = null;
     };
 
-    canvas.addEventListener('touchstart', handleTouchStart);
-    canvas.addEventListener('touchend', handleTouchEnd);
+    canvas.addEventListener('touchstart', handleTouchStart, { passive: false });
+    canvas.addEventListener('touchmove', handleTouchMove, { passive: false });
+    canvas.addEventListener('touchend', handleTouchEnd, { passive: false });
+    
     return () => {
       canvas.removeEventListener('touchstart', handleTouchStart);
+      canvas.removeEventListener('touchmove', handleTouchMove);
       canvas.removeEventListener('touchend', handleTouchEnd);
     };
   }, [direction, gameStarted, gameOver]);
