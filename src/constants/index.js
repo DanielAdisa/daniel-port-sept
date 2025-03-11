@@ -288,11 +288,11 @@ export const PRICING = [
           "SSL certificate setup"
         ],
         price: {
-          USD: 875,
-          NGN: convertCurrency(875, exchangeRates.NGN),
-          EUR: convertCurrency(875, exchangeRates.EUR),
-          GBP: convertCurrency(875, exchangeRates.GBP),
-          GHS: convertCurrency(875, exchangeRates.GHS),
+          USD: 500,
+          NGN: convertCurrency(500, exchangeRates.NGN),
+          EUR: convertCurrency(500, exchangeRates.EUR),
+          GBP: convertCurrency(500, exchangeRates.GBP),
+          GHS: convertCurrency(500, exchangeRates.GHS),
         },
         period: "one-time payment"
       },
@@ -308,20 +308,20 @@ export const PRICING = [
           "Basic email marketing integration"
         ],
         originalPrice: {
-          USD: 2250,
-          NGN: convertCurrency(2250, exchangeRates.NGN),
-          EUR: convertCurrency(2250, exchangeRates.EUR),
-          GBP: convertCurrency(2250, exchangeRates.GBP),
-          GHS: convertCurrency(2250, exchangeRates.GHS),
+          USD: 3000,
+          NGN: convertCurrency(3000, exchangeRates.NGN),
+          EUR: convertCurrency(3000, exchangeRates.EUR),
+          GBP: convertCurrency(3000, exchangeRates.GBP),
+          GHS: convertCurrency(3000, exchangeRates.GHS),
         },
         price: {
-          USD: 1912.50,
-          NGN: convertCurrency(1912.50, exchangeRates.NGN),
-          EUR: convertCurrency(1912.50, exchangeRates.EUR),
-          GBP: convertCurrency(1912.50, exchangeRates.GBP),
-          GHS: convertCurrency(1912.50, exchangeRates.GHS),
+          USD: 2500,
+          NGN: convertCurrency(2500, exchangeRates.NGN),
+          EUR: convertCurrency(2500, exchangeRates.EUR),
+          GBP: convertCurrency(2500, exchangeRates.GBP),
+          GHS: convertCurrency(2500, exchangeRates.GHS),
         },
-        discount: 15,
+        discount: 20,
         period: "one-time payment"
       },
       {
@@ -336,11 +336,11 @@ export const PRICING = [
           "Performance optimization"
         ],
         price: {
-          USD: 3750,
-          NGN: convertCurrency(3750, exchangeRates.NGN),
-          EUR: convertCurrency(3750, exchangeRates.EUR),
-          GBP: convertCurrency(3750, exchangeRates.GBP),
-          GHS: convertCurrency(3750, exchangeRates.GHS),
+          USD: 4000,
+          NGN: convertCurrency(4000, exchangeRates.NGN),
+          EUR: convertCurrency(4000, exchangeRates.EUR),
+          GBP: convertCurrency(4000, exchangeRates.GBP),
+          GHS: convertCurrency(4000, exchangeRates.GHS),
         },
         period: "starting price"
       },
@@ -350,89 +350,91 @@ export const PRICING = [
     title: "Skills Acquisition",
     tiers: [
       {
-        name: "Web Development Training",
-        description: "Learn to build professional websites from scratch",
-        features: [
-          "HTML, CSS, JavaScript",
-          "React framework",
-          "20 hours of instruction",
-          "Practice projects",
+        "name": "Web Development Training",
+        "description": "Master web development with hands-on projects and expert guidance",
+        "features": [
+          "Comprehensive coverage of HTML, CSS, JavaScript, and React",
+          "48 hours of live instruction",
+          "Build a portfolio with practice projects",
           "Certificate of completion",
-          "Access to private community"
+          "Lifetime access to private community",
+          "Personalized feedback on projects"
         ],
-        originalPrice: {
-          USD: 450,
-          NGN: convertCurrency(450, exchangeRates.NGN),
-          EUR: convertCurrency(450, exchangeRates.EUR),
-          GBP: convertCurrency(450, exchangeRates.GBP),
-          GHS: convertCurrency(450, exchangeRates.GHS),
+        "originalPrice": {
+          "USD": 600,
+          "NGN": convertCurrency(600, exchangeRates.NGN),
+          "EUR": convertCurrency(600, exchangeRates.EUR),
+          "GBP": convertCurrency(600, exchangeRates.GBP),
+          "GHS": convertCurrency(600, exchangeRates.GHS)
         },
-        price: {
-          USD: 382.50,
-          NGN: convertCurrency(382.50, exchangeRates.NGN),
-          EUR: convertCurrency(382.50, exchangeRates.EUR),
-          GBP: convertCurrency(382.50, exchangeRates.GBP),
-          GHS: convertCurrency(382.50, exchangeRates.GHS),
+        "price": {
+          "USD": 500,
+          "NGN": convertCurrency(500, exchangeRates.NGN),
+          "EUR": convertCurrency(500, exchangeRates.EUR),
+          "GBP": convertCurrency(500, exchangeRates.GBP),
+          "GHS": convertCurrency(500, exchangeRates.GHS)
         },
-        discount: 15,
-        period: "per course"
+        "discount": 16.67,
+        "period": "3-Month Program | 2 × Weekly Sessions | 2 Hours Per Session"
       },
       {
-        name: "Graphics Design Training",
-        description: "Master the fundamentals of graphic design",
-        features: [
-          "Adobe Photoshop",
-          "Adobe Illustrator",
-          "Design principles",
-          "15 hours of instruction",
-          "Portfolio development",
-          "Template files included"
+        "name": "Graphics Design Training",
+        "description": "Master graphic design essentials and build a standout portfolio",
+        "features": [
+          "Expert instruction in Adobe Photoshop and Illustrator",
+          "Core design principles for creating impactful visuals",
+          "15 hours of live, interactive sessions",
+          "Guided portfolio development with real-world projects",
+          "Exclusive template files to jumpstart your designs",
+          "Certificate of completion"
         ],
-        originalPrice: {
-          USD: 300,
-          NGN: convertCurrency(300, exchangeRates.NGN),
-          EUR: convertCurrency(300, exchangeRates.EUR),
-          GBP: convertCurrency(300, exchangeRates.GBP),
-          GHS: convertCurrency(300, exchangeRates.GHS),
+        "originalPrice": {
+          "USD": 250,
+          "NGN": convertCurrency(250, exchangeRates.NGN),
+          "EUR": convertCurrency(250, exchangeRates.EUR),
+          "GBP": convertCurrency(250, exchangeRates.GBP),
+          "GHS": convertCurrency(250, exchangeRates.GHS)
         },
-        price: {
-          USD: 255,
-          NGN: convertCurrency(255, exchangeRates.NGN),
-          EUR: convertCurrency(255, exchangeRates.EUR),
-          GBP: convertCurrency(255, exchangeRates.GBP),
-          GHS: convertCurrency(255, exchangeRates.GHS),
+        "price": {
+          "USD": 212,
+          "NGN": convertCurrency(212, exchangeRates.NGN),
+          "EUR": convertCurrency(212, exchangeRates.EUR),
+          "GBP": convertCurrency(212, exchangeRates.GBP),
+          "GHS": convertCurrency(212, exchangeRates.GHS)
         },
-        discount: 15,
-        period: "per course"
+        "discount": 15,
+        "period": "6-Week Program | 1 × Weekly Session | 2.5 Hours Per Session"
       },
       {
-        name: "3D Design Training",
-        description: "Enter the exciting world of 3D modeling and rendering",
-        features: [
-          "Blender basics",
-          "3D modeling techniques",
-          "Texturing and materials",
-          "Lighting and rendering",
-          "25 hours of instruction",
-          "Software installation guide"
+        "name": "3D Design Training",
+        "description": "Master 3D modeling and rendering with Blender to create stunning visuals",
+        "features": [
+          "Comprehensive introduction to Blender and its tools",
+          "Professional 3D modeling techniques for beginners and intermediates",
+          "Create realistic textures, materials, and lighting setups",
+          "Render high-quality images and animations",
+          "25 hours of live, interactive instruction",
+          "Step-by-step software installation guide",
+          "Build a portfolio with guided projects",
+          "Certificate of completion"
         ],
-        originalPrice: {
-          USD: 550,
-          NGN: convertCurrency(550, exchangeRates.NGN),
-          EUR: convertCurrency(550, exchangeRates.EUR),
-          GBP: convertCurrency(550, exchangeRates.GBP),
-          GHS: convertCurrency(550, exchangeRates.GHS),
+        "originalPrice": {
+          "USD": 550,
+          "NGN": convertCurrency(550, exchangeRates.NGN),
+          "EUR": convertCurrency(550, exchangeRates.EUR),
+          "GBP": convertCurrency(550, exchangeRates.GBP),
+          "GHS": convertCurrency(550, exchangeRates.GHS)
         },
-        price: {
-          USD: 467.50,
-          NGN: convertCurrency(467.50, exchangeRates.NGN),
-          EUR: convertCurrency(467.50, exchangeRates.EUR),
-          GBP: convertCurrency(467.50, exchangeRates.GBP),
-          GHS: convertCurrency(467.50, exchangeRates.GHS),
+        "price": {
+          "USD": 467.50,
+          "NGN": convertCurrency(467.50, exchangeRates.NGN),
+          "EUR": convertCurrency(467.50, exchangeRates.EUR),
+          "GBP": convertCurrency(467.50, exchangeRates.GBP),
+          "GHS": convertCurrency(467.50, exchangeRates.GHS)
         },
-        discount: 15,
-        period: "per course"
-      },
+        "discount": 15,
+        "period": "8-Week Program | 1 × Weekly Session | 3 Hours Per Session"
+      }
     ],
   },
 ];
