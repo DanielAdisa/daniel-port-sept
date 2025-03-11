@@ -50,6 +50,7 @@ const Navbar = () => {
     { name: "Projects", href: "#projects" },
     { name: "Pricing", href: "#pricing" },
     { name: "Contact", href: "#contact" },
+    { name: "Games", href: "/games" },
   ];
 
   return (
