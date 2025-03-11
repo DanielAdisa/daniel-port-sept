@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Navbar from "./components/Navbar"
 import Pricing from "./components/Pricing" // Import the Pricing component
 import { BiDollar } from "react-icons/bi"
+import SnakeGame from './Games';
 
 // Lazy load components for better performance
 const Hero = lazy(() => import("./components/Hero"))
@@ -117,6 +118,9 @@ const App = () => {
                     <Pricing />
                   </div>
                   <Contact />
+                  <div id="games" className='relative z-0'>
+                    <SnakeGame />
+                  </div>
                   
                   {/* Footer */}
                   <footer className="py-8 mt-20 text-sm text-center border-t text-stone-500 border-stone-800">
